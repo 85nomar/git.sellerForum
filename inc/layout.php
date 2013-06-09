@@ -1,28 +1,34 @@
-<?php
-
+<?php 
+	
 	class Layout {
+
 		public $title = '';
 
-		// Main Navigation
-		public $formNav = array(
-			'Form step 1' => array(
-				'url' => '#step1'
+		public $mainNav = array(
+			'Home' => array(
+				'url' => 'index'
 			),
-			'Form step 2' => array(
-				'url' => '#step2'
+			'Documentation' => array(
+				'url' => '#step2',
+                'children' => array(
+                	'ricardo API Services' => 'api-services',
+                	'Technical Documentation' => 'technical',
+                	'Security Documentation' => 'security',
+                	'How to' => 'howto',
+                	)
 			),
-			'Form step 3' => array(
-				'url' => '#step3'
+			'Forum' => array(
+				'url' => 'forum'
 			),
-			'Form step 4' => array(
-				'url' => '#step4'
+			'News' => array(
+				'url' => 'news'
 			),
-			'Form step 5' => array(
-				'url' => '#step4'
+			'Kontakt' => array(
+				'url' => 'contact'
 			)
 		);
 
-		public $navTitle = '';
+
 
 		/*function __construct() {
 			date_default_timezone_set('UTC'); 
@@ -30,11 +36,25 @@
 		}
 		*/
 
+		public $navLvl1 = '';
+		public $navLvl2 = '';
+
+		public $prependScript = '';
+		public $appendScript = '';
+
+		public $prependCSS = '';
+		public $appendCSS = '';
+
+		function __construct() {
+			date_default_timezone_set('UTC'); 
+			$this->navLvl1 = $this->navLvl2 = basename($_SERVER['PHP_SELF'], ".php");
+		}
+
 		// Layout listed Contructor
 		public function start() {
 			require('head.php');
 			require('header.php');
-			require('formnav.php');
+			require('mainnav.php');
 		}
 
 		public function end() {

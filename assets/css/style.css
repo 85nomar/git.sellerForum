@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'MetaOT';
+  src: url('../fonts/MetaOT-Bold_0.eot');
+  src: url('../fonts/MetaOT-Bold_0.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/MetaOT-Bold_0.ttf') format('truetype');      
+}
+@font-face {
+  font-family: 'MetaOTBold';
+  src: url('../fonts/MetaWeb-Bold.eot');
+  src: url('../fonts/MetaWeb-Bold.eot?#iefix') format('embedded-opentype'),
+     url("../fonts/MetaWeb-Bold.woff") format("woff"),
+     url("../fonts/MetaWeb-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'MetaOTBook';
+  src: url('../fonts/MetaWeb-Book.eot');
+  src: url('../fonts/MetaWeb-Book.eot?#iefix') format('embedded-opentype'),
+   url("../fonts/MetaWeb-Book.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'MetaOTBook';
+  src: url('../fonts/MetaWeb-Book.eot');
+  src: url('../fonts/MetaWeb-Book.eot?#iefix') format('embedded-opentype'),
+   url("../fonts/MetaWeb-Book.woff") format("woff");
+}
+
+
+
+header {
+  margin:30px 0;
+}
+
+footer section {
+  border-top:1px solid #ddd;
+  margin-top:20px;
+  padding:10px 0;
+}
+
+.hero-unit {
+    text-align: center;
+}

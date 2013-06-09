@@ -1,26 +1,37 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="Content-Language" content="DE">
-        <title> ricardo.ch<?php echo !empty($this->title) ? ' - '.$this->title : '' ?> </title>        
- 
-        <!-- ric default styles-->
-        <link rel="stylesheet" type="text/css" href="css/ric_default.css">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> ricardo.ch<?php echo !empty($this->title) ? ' - '.$this->title : '' ?> </title>   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-        <link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="lib/css/bootstrap-datetimepicker.min.css">
-        
-        <script type="text/javascript" src="lib/js/jquery-1.9.1.js"></script>
-        <script type="text/javascript" src="lib/js/bootstrap.js"></script>
-        <script type="text/javascript" src="lib/js/bootstrap-datetimepicker.min.js"></script>
+    <!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+    <!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+    <!--script src="js/less-1.3.3.min.js"></script-->
+    <!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+    
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
 
-        <!-- scripts -->
-        <script type="text/javascript" src="lib/js/main.js"></script>
+  <!-- Fav and touch icons 
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+</head>
 
-    </head>
-    <body data-spy="scroll" data-target=".bs-docs-sidebar">
-        <div class="container">
+<body>
+<div class="container-fluid">
