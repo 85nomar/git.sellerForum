@@ -9,7 +9,7 @@
 				'url' => 'index'
 			),
 			'Documentation' => array(
-				'url' => '#step2',
+				'url' => '',
                 'children' => array(
                 	'ricardo API Services' => 'api-services',
                 	'Technical Documentation' => 'technical',
