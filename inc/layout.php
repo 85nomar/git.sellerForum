@@ -23,8 +23,8 @@
 			'News' => array(
 				'url' => 'news'
 			),
-			'Kontakt' => array(
-				'url' => 'contact'
+			'Register' => array(
+				'url' => 'register'
 			)
 		);
 

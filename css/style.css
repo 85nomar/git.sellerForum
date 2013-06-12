@@ -1,36 +1,37 @@
 @font-face {
   font-family: 'MetaOT';
-  src: url('../fonts/MetaOT-Bold_0.eot');
-  src: url('../fonts/MetaOT-Bold_0.eot?#iefix') format('embedded-opentype'),
-     url('../fonts/MetaOT-Bold_0.ttf') format('truetype');      
+  src: url('../assets/fonts/MetaOT-Bold_0.eot');
+  src: url('../assets/fonts/MetaOT-Bold_0.eot?#iefix') format('embedded-opentype'),
+     url('../assets/fonts/MetaOT-Bold_0.ttf') format('truetype');      
 }
 @font-face {
   font-family: 'MetaOTBold';
-  src: url('../fonts/MetaWeb-Bold.eot');
-  src: url('../fonts/MetaWeb-Bold.eot?#iefix') format('embedded-opentype'),
-     url("../fonts/MetaWeb-Bold.woff") format("woff"),
-     url("../fonts/MetaWeb-Bold.ttf") format("truetype");
+  src: url('../assets/fonts/MetaWeb-Bold.eot');
+  src: url('../assets/fonts/MetaWeb-Bold.eot?#iefix') format('embedded-opentype'),
+     url("../assets/fonts/MetaWeb-Bold.woff") format("woff"),
+     url("../assets/fonts/MetaWeb-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: 'MetaOTBook';
-  src: url('../fonts/MetaWeb-Book.eot');
-  src: url('../fonts/MetaWeb-Book.eot?#iefix') format('embedded-opentype'),
-   url("../fonts/MetaWeb-Book.woff") format("woff");
+  src: url('../assets/fonts/MetaWeb-Book.eot');
+  src: url('../assets/fonts/MetaWeb-Book.eot?#iefix') format('embedded-opentype'),
+   url("../assets/fonts/MetaWeb-Book.woff") format("woff");
 }
 
 @font-face {
   font-family: 'MetaOTBook';
-  src: url('../fonts/MetaWeb-Book.eot');
-  src: url('../fonts/MetaWeb-Book.eot?#iefix') format('embedded-opentype'),
-   url("../fonts/MetaWeb-Book.woff") format("woff");
+  src: url('../assets/fonts/MetaWeb-Book.eot');
+  src: url('../assets/fonts/MetaWeb-Book.eot?#iefix') format('embedded-opentype'),
+   url("../assets/fonts/MetaWeb-Book.woff") format("woff");
 }
-
 
 @font-face {
-  font-family: 'Lato-Hairline';
-  src: url('../assets/fonts/Lato-Hairline.ttf');
+  font-family: 'MetaOTLight';
+  src: url('../assets/fonts/MetaWeb-Light.eot');
+  src: url('../assets/fonts/MetaWeb-Light.eot?#iefix') format('embedded-opentype'),
+   url("../assets/fonts/MetaWeb-Light.woff") format("woff"),
+   url("../assets/fonts/MetaWeb-Light.ttf") format("truetype");
 }
-
 
 
 /*
@@ -41,8 +42,8 @@ html, body {
   height:100%;
 }
 
-h1, h2, h3 {
-  font-family: 'Lato-Hairline', sans-serif;
+h1, h2, h3, h4 {
+  font-family: 'MetaOTLight', sans-serif;
 }
 
 header {
@@ -60,11 +61,38 @@ header {
   padding-bottom:80px;
 }
 
+.boxed {
+  background:#f9f9f9;
+  border-radius: 4px;
+  border:1px solid #ddd;
+  min-height:150px !important;
+  margin:5px 0;
+}
+
+
+/*
+  FORM
+*/
+fieldset>h4 {
+  border:1px solid #fc9013;
+  border-radius: 4px 4px 0 0;
+  font-weight:normal;
+  padding:5px 10px;
+  margin:-1px -1px 10px;
+  background: rgba(252, 144, 19, 0.51);
+  text-shadow:0 1px 0 rgba(255,255,255,.5);
+}
+
+.form-btns {
+  padding:10px 0;
+}
+
+
 /*
   FOOTER
 */
 #footer {
-  background: #DF992B;
+  background: #fc9013;
   color:#555;
 }
  .credit {
