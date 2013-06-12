@@ -12,9 +12,9 @@
 				'url' => '',
                 'children' => array(
                 	'ricardo API Services' => 'api-services',
-                	'Technical Documentation' => 'technical',
-                	'Security Documentation' => 'security',
-                	'How to' => 'howto',
+                	'Technical Documentation' => 'api-technical',
+                	'Security Documentation' => 'api-security',
+                	'How to' => 'api-howto',
                 	)
 			),
 			'Forum' => array(

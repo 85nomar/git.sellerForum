@@ -22,17 +22,17 @@
 						$children = (isset($page['children'])); 
 						?>
 
-						<li class="dropdown" <?php echo $isActive ? ' class="active"' : '' ?> >
+						<li class="dropdown">
 							
 							<?php  
+
 							if($children == 1) {
 								$dropChildren = "data-toggle='dropdown' class='dropdown-toggle'";
 							}else {
 								$dropChildren = '';
 							}
 							?>
-							<a href="<?php echo $thisURL?>.php"  <?php echo 
-							$dropChildren; ?>  > <?php echo $pageName?></a>
+							<a <?php echo $isActive ? ' class="active"' : '' ?> href="<?php echo $thisURL?>.php"  <?php echo $dropChildren; ?>  > <?php echo $pageName?></a>
 							<?php if(isset($page['children'])): ?>
 								<ul class="dropdown-menu">
 									<?php foreach($page['children'] as $childName => $childURL) : ?>
@@ -43,6 +43,7 @@
 						</li>
 						<?php endforeach?>
 					</ul>
+
             	</div><!-- /.nav-collapse -->
 			</div><!-- /navbar-inner -->
 		</div>

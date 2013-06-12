@@ -14,6 +14,9 @@
     
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/prettify/prettify.css">
+  
     <link href="css/style.css" rel="stylesheet">
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -30,8 +33,10 @@
   -->
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/prettify/prettify.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 
-<body>
+
+<body data-source=<?php echo "'$this->title'" ?> onload="prettyPrint()">
 <div id="wrap" class="container-fluid">
