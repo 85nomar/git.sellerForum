@@ -14,6 +14,4 @@ $Layout->start(); ?>
     </div><!-- close content -->
 
 
-
-
 <?php $Layout->end(); ?>
