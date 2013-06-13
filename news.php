@@ -5,12 +5,15 @@ $Layout->title = 'Seller API page';
 $Layout->start(); ?>
 
 
-	<div id="content" class="container-fluid">
+    <div id="content" class="container-fluid">
+        <div class="container">
 
 		<h1>NEWS</h1>
 
+        </div>
+    </div><!-- close content -->
 
-	</div><!-- close content -->
-</div><!-- close wrap -->
+
+
 
 <?php $Layout->end(); ?>

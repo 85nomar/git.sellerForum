@@ -5,8 +5,9 @@ $Layout->title = 'API-Services';
 $Layout->start(); ?>
 
 
-	<div id="content" class="container">
-
+<div id="content" class="container-fluid">
+	<div class="container">		
+		
 		<h1>ricardo API Services</h1>
 		<div class="row-fluid">
 
@@ -89,8 +90,8 @@ Ricardo-Password: Password</pre>
 
 
 
-	</div><!-- close content -->
-</div><!-- close wrap -->
+	</div>
+</div><!-- close content -->
 
 <?php $Layout->end(); ?>
 

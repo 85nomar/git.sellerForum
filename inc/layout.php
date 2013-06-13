@@ -53,7 +53,6 @@
 		// Layout listed Contructor
 		public function start() {
 			require('head.php');
-			require('header.php');
 			require('mainnav.php');
 		}
 

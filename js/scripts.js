@@ -3,9 +3,10 @@ $(document).ready(function(){
 
 
 
-
-    //BOOTSTRAP
-    
+    //colorize body
+    if ($('#wrap .content-bottom:first').length > 0) {
+        $('body').css('background-color', '#f2f2f2');
+    }
 
 
 

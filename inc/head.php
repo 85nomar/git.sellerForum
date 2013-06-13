@@ -15,7 +15,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet">
     
     <link rel="stylesheet" href="assets/prettify/prettify.css">
   

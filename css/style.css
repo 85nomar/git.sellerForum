@@ -34,9 +34,12 @@
 }
 
 
-/*
+/*==================================================
   GENERAL
-*/
+==================================================*/
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 html, body {
   height:100%;
@@ -46,7 +49,9 @@ h1, h2, h3, h4 {
   font-family: 'MetaOTLight', sans-serif;
   font-weight: normal;
 }
-
+h1 {
+  margin-top:30px;
+}
 h4 {
   text-shadow:0 1px 0 rgba(255,255,255,1);
   font-weight:normal;
@@ -73,12 +78,22 @@ p.strong {
 xmp {
   margin:0;
 }
-/*
+
+a.btn-anchor {
+  font-weight: bold;
+}
+a.btn-anchor:hover {
+  text-decoration: none
+}
+
+/*==================================================
   LAYOUT
-*/
+==================================================*/
 header {
   margin:30px 0;
 }
+
+
 
 #wrap {
   min-height: 100%;
@@ -88,13 +103,45 @@ header {
 }
 
 #content {
-  padding-bottom:80px;
+  border-top: 20px solid #F79623;
+  margin-left:-20px;
+  margin-right:-20px;
+  background:#fff;
+}
+#content:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 20px;
+  bottom: 100%;
+  left: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 85px 6px rgba(211, 118, 11, 1);
+  -moz-box-shadow: 0 85px 6px rgba(211, 118, 11, 1);
+  box-shadow: 0 85px 6px rgba(211, 118, 11, 1);
+}
+.content-bottom {
+  padding-top:30px;
 }
 
-.boxed {
-  /*background:#f9f9f9;
+.visual-text, .visual-img {
+  width:49.33%;
+  display:inline-block;
+  padding:0 20px;
+  float: left;
+  box-sizing:border-box;
+  moz-box-sizing:border-box;
+}
+.visual-img {
+  text-align: right;
+}
 
-  */
+
+.boxed {
+  /*background:#f9f9f9;*/
   min-height:140px !important;
   padding:19px;
   margin-bottom: 20px;
@@ -116,25 +163,104 @@ div.sectioned {
   border-top:1px solid #eee;
 }
 
-/*
-  NAVIGATION
-*/
-a.active {
-  color: #555;
-  background-color: #e5e5e5;
+/*footer*/
+#footer {
+  background:#c5c5c5;
+  color:#555;
+}
+ .credit {
+  margin:20px 0;
+  color:#fff;
+  font-size:12px;
+ }
+
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
-/*
+#push {
+    padding-bottom: 50px;
+}
+
+/*==================================================
+  NAVIGATION
+==================================================*/
+nav {
+  margin: 20px -20px;
+  margin-bottom: 0;
+  background: #fff;
+  z-index: 10;
+  position: relative;
+  margin-top: 0;
+  padding-top: 20px;
+}
+nav .logo {
+  display: inline-block;
+  position: relative;
+  height: 35px;
+  float: left;
+  margin-top:5px;
+  padding-bottom: 20px;
+}
+nav .logo img{
+  width:150px;
+}
+nav .logo span{
+  font-family: 'MetaOTLight', sans-serif;
+  font-weight: normal;
+  font-size:22px;
+  padding-left:5px;
+  padding-top:5px;
+  color:#757575;
+  display: block;
+  float: right;
+}
+
+nav .navbar {
+  margin-bottom:0;
+  z-index: 10;
+  background:#fff;
+  position: relative;
+}
+
+
+nav .nav-collapse {
+  float:right;
+} 
+
+nav .logo:hover{
+  text-decoration: none;
+}
+
+
+a {border-radius:4px;}
+
+
+.navbar .nav>li>a {
+  margin:0 2px;
+}
+a.active {background:#ddd; border-radius: 0}
+.navbar .nav>li>a.active {
+  border-radius:4px;
+  color: #fff;
+  background-color:#F79623;
+  text-shadow:none;
+}
+
+/*==================================================
   FORM
-*/
+==================================================*/
 .form-btns {
   padding:10px 0;
 }
 
 
-/*********
+/*==================================================
   BOOTSTRAP
-**********/
+==================================================*/
 
 /*modal*/
 
@@ -145,9 +271,9 @@ a.active {
 }
 
 
-/*
+/*==================================================
   FONT AWESOME
-*/
+==================================================*/
 .icon-question-sign {
   font-size: 17px;
   color: #1748A4;
@@ -158,9 +284,24 @@ a.active {
   text-decoration: none;
   opacity: 1;
 }
-/*
+
+
+a .icon-angle-right {
+  padding: 0px 5px 1px;
+  margin-right: 3px;
+  background-color: #08c;
+  color: #fff;
+  border-radius: 4px;
+}
+a:hover .icon-angle-right {
+  background-color:#005580;
+}
+
+
+
+/*==================================================
   PRETTIFY
-*/
+==================================================*/
 pre.prettyprint {
   background:#fff;
   border:1px solid #ddd;
@@ -171,33 +312,39 @@ pre.prettyprint {
 }
 
 
-
-
-/*
-  FOOTER
-*/
-#footer {
-  background: #DF992B;
-  color:#555;
+/*==================================================
+ * Shadow Effect
+ * ===============================================*/
+.shadow
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
- .credit {
-  margin:20px 0;
- }
-
-footer a {
-  color: #fff;
+.shadow:before, .shadow:after
+{
+  content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
 }
-footer a:hover {
-  text-decoration: underline;
-}
 
-/*
+
+
+/*==================================================
   RESPONSIVE
-*/
+==================================================*/
 
 /*modal*/
-
-
 @media (max-width: 767px) {
   #footer {
     margin-left: -20px;
@@ -207,9 +354,19 @@ footer a:hover {
   }
 }
 
+@media (max-width: 979px){
+
+  nav .nav-collapse, nav .logo {
+    float:none;
+  }
+  nav .logo {margin-left:10px;}
+
+}
+
 @media (min-width: 800px) {
   body .modal{
       width: 650px;
       margin-left: -390px; /* - width/2 */
   }
 }
+

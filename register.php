@@ -5,7 +5,8 @@ $Layout->title = 'registration';
 $Layout->start(); ?>
 
 
-    <div id="content" class="container">
+    <div id="content" class="container-fluid">
+      <div class="container">
 
                 <h1>Solicitation</h1>
 
@@ -154,7 +155,7 @@ $Layout->start(); ?>
         </form>
 
 
-    </div><!-- close content -->
-</div><!-- close wrap -->
+    </div>
+</div><!-- close content -->
 
 <?php $Layout->end(); ?>
