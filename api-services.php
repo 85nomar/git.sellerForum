@@ -5,7 +5,7 @@ $Layout->title = 'API-Services';
 $Layout->start(); ?>
 
 
-	<div id="content" class="container-fluid">
+	<div id="content" class="container">
 
 		<h1>ricardo API Services</h1>
 		<div class="row-fluid">

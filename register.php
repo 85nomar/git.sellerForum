@@ -5,7 +5,7 @@ $Layout->title = 'registration';
 $Layout->start(); ?>
 
 
-    <div id="content" class="container-fluid">
+    <div id="content" class="container">
 
                 <h1>Solicitation</h1>
 

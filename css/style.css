@@ -66,6 +66,16 @@ h4:first-child {
   margin-top:0px;
 }
 
+p.strong {
+  font-weight: bold;
+}
+
+xmp {
+  margin:0;
+}
+/*
+  LAYOUT
+*/
 header {
   margin:30px 0;
 }
@@ -100,6 +110,12 @@ header {
   moz-box-sizing:border-box;
 }
 
+
+div.sectioned {
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.5);
+  border-top:1px solid #eee;
+}
+
 /*
   NAVIGATION
 */
@@ -115,6 +131,33 @@ a.active {
   padding:10px 0;
 }
 
+
+/*********
+  BOOTSTRAP
+**********/
+
+/*modal*/
+
+.modal-inner {
+  border-radius: 0 0 4px 4px;
+  padding-bottom:10px;
+  max-height: 800px;
+}
+
+
+/*
+  FONT AWESOME
+*/
+.icon-question-sign {
+  font-size: 17px;
+  color: #1748A4;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+.icon-question-sign:hover {
+  text-decoration: none;
+  opacity: 1;
+}
 /*
   PRETTIFY
 */
@@ -123,6 +166,12 @@ pre.prettyprint {
   border:1px solid #ddd;
   padding:10px;
 }
+.tag {
+  font-weight:bold;
+}
+
+
+
 
 /*
   FOOTER
@@ -146,11 +195,21 @@ footer a:hover {
   RESPONSIVE
 */
 
+/*modal*/
+
 
 @media (max-width: 767px) {
-#footer {
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 800px) {
+  body .modal{
+      width: 650px;
+      margin-left: -390px; /* - width/2 */
+  }
 }
