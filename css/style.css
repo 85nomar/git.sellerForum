@@ -145,15 +145,17 @@ header {
 }
 
 .visual-text, .visual-img {
-  width:49.33%;
+  width:47%;
   display:inline-block;
-  padding:0 20px;
+  padding-left:20px;
   float: left;
   box-sizing:border-box;
   moz-box-sizing:border-box;
 }
 .visual-img {
   text-align: right;
+  padding-right:20;
+  padding-left:0;
 }
 
 .boxed {
