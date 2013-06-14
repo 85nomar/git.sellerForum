@@ -150,7 +150,7 @@ header {
   padding-left:20px;
   float: left;
   box-sizing:border-box;
-  moz-box-sizing:border-box;
+  -moz-box-sizing:border-box;
 }
 .visual-img {
   text-align: right;
@@ -172,7 +172,7 @@ header {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-sizing:border-box;
-  moz-box-sizing:border-box;
+  -moz-box-sizing:border-box;
 }
 
 /*documentation content*/
@@ -356,31 +356,6 @@ pre.prettyprint {
 }
 .tag, .typ {
   font-weight:bold;
-}
-/*==================================================
- * Shadow Effect
- * ===============================================*/
-.shadow
-{
-    position:relative;
-    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-.shadow:before, .shadow:after
-{
-  content:"";
-    position:absolute;
-    z-index:-1;
-    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    box-shadow:0 0 20px rgba(0,0,0,0.8);
-    top:50%;
-    bottom:0;
-    left:10px;
-    right:10px;
-    -moz-border-radius:100px / 10px;
-    border-radius:100px / 10px;
 }
 /*==================================================
   RESPONSIVE
