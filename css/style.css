@@ -312,6 +312,17 @@ a.active {background:#ddd;}
 .form-btns {
   padding:10px 0;
 }
+
+.area {
+  height:150px;
+  max-height:150px;
+}
+.area-limiter {
+  width: 25px;
+  margin-top: -52px;
+  border-radius: 0 4px 0 4px !important;
+}
+
 /*==================================================
   BOOTSTRAP
 ==================================================*/
