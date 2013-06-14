@@ -8,9 +8,7 @@ $Layout->start(); ?>
     <div id="content" class="container-fluid">
       <div class="container">
 
-                <h1>Solicitation</h1>
-
-
+        <h1>Registration</h1>
         <form class="form-horizontal">
             <div class="row">
                 <fieldset class="boxed span6">

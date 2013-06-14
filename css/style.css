@@ -32,8 +32,6 @@
    url("../assets/fonts/MetaWeb-Light.woff") format("woff"),
    url("../assets/fonts/MetaWeb-Light.ttf") format("truetype");
 }
-
-
 /*==================================================
   GENERAL
 ==================================================*/
@@ -45,6 +43,7 @@ html, body {
   height:100%;
 }
 
+h1, h2, h3, h4,h5,h6 {color:#555;}
 h1, h2, h3, h4 {
   font-family: 'MetaOTLight', sans-serif;
   font-weight: normal;
@@ -55,7 +54,6 @@ h1 {
 h4 {
   text-shadow:0 1px 0 rgba(255,255,255,1);
   font-weight:normal;
-  border-bottom:1px solid #ddd;
   margin:25px 0 10px;
   margin-bottom:10px;
   padding:0;
@@ -69,6 +67,15 @@ h4 {
 }
 h4:first-child {
   margin-top:0px;
+}
+h5 {
+  color: #555;
+  font-size: 16px;
+  border-bottom: 3px dotted #ddd;
+  background: #ddd;
+  padding: 5px 10px;
+  border-radius: 4px;
+  padding-top: 10px;
 }
 
 p.strong {
@@ -86,14 +93,21 @@ a.btn-anchor:hover {
   text-decoration: none
 }
 
+.btn-orange {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  background: #F79623;
+}
+.btn-orange:hover {
+  background-color:#F78A08;
+}
+
 /*==================================================
   LAYOUT
 ==================================================*/
 header {
   margin:30px 0;
 }
-
-
 
 #wrap {
   min-height: 100%;
@@ -126,6 +140,9 @@ header {
 .content-bottom {
   padding-top:30px;
 }
+.content-bottom h3 {
+  border-bottom: 3px dotted #ddd;
+}
 
 .visual-text, .visual-img {
   width:49.33%;
@@ -139,10 +156,9 @@ header {
   text-align: right;
 }
 
-
 .boxed {
   /*background:#f9f9f9;*/
-  min-height:140px !important;
+  min-height:140px;
   padding:19px;
   margin-bottom: 20px;
   background-color: #f5f5f5;
@@ -157,32 +173,73 @@ header {
   moz-box-sizing:border-box;
 }
 
-
+/*documentation content*/
 div.sectioned {
-  box-shadow: 0 -1px 0 rgba(255,255,255,0.5);
-  border-top:1px solid #eee;
+  margin: 0 0 20px;
 }
+div.doc-text {
+  padding:0 10px;
+}
+div.doc-text p {
+  margin:2px;
+}
+
+/* TO TOP*/
+#toTop-right {
+    display:none;
+    text-decoration:none;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    outline:none;
+}
+#toTop-left {
+    display:none;
+    text-decoration:none;
+    position:fixed;
+    bottom:20px;
+    left:20px;
+    outline:none;
+}
+#toTop-center {
+    display:none;
+    text-decoration:none;
+    position:fixed;
+    bottom:10px;
+    left:50%;
+    margin-left:-20px; /*Feintuning je nach Inhalt */
+    outline:none;
+}
+
+/*registration*/
+#registration h4 {
+  border-bottom:1px solid #ddd;
+}
+
+#registration fieldset.boxed {
+  min-height: 195px;
+}
+
 
 /*footer*/
 #footer {
   background:#c5c5c5;
   color:#555;
 }
- .credit {
+#footer .credit {
   margin:20px 0;
   color:#fff;
   font-size:12px;
  }
-
-footer a {
+#footer a {
   color: #fff;
 }
-footer a:hover {
+#footer a:hover {
   text-decoration: underline;
 }
 
 #push {
-    padding-bottom: 50px;
+    padding-bottom: 80px;
 }
 
 /*==================================================
@@ -218,36 +275,33 @@ nav .logo span{
   display: block;
   float: right;
 }
-
 nav .navbar {
   margin-bottom:0;
   z-index: 10;
   background:#fff;
   position: relative;
 }
-
-
 nav .nav-collapse {
   float:right;
 } 
-
 nav .logo:hover{
   text-decoration: none;
 }
 
-
 a {border-radius:4px;}
-
 
 .navbar .nav>li>a {
   margin:0 2px;
 }
-a.active {background:#ddd; border-radius: 0}
+a.active {background:#ddd;}
 .navbar .nav>li>a.active {
   border-radius:4px;
   color: #fff;
   background-color:#F79623;
   text-shadow:none;
+}
+.dropdown-menu>li>a {
+  border-radius: 0;
 }
 
 /*==================================================
@@ -256,21 +310,16 @@ a.active {background:#ddd; border-radius: 0}
 .form-btns {
   padding:10px 0;
 }
-
-
 /*==================================================
   BOOTSTRAP
 ==================================================*/
 
 /*modal*/
-
 .modal-inner {
   border-radius: 0 0 4px 4px;
   padding-bottom:10px;
   max-height: 800px;
 }
-
-
 /*==================================================
   FONT AWESOME
 ==================================================*/
@@ -285,7 +334,6 @@ a.active {background:#ddd; border-radius: 0}
   opacity: 1;
 }
 
-
 a .icon-angle-right {
   padding: 0px 5px 1px;
   margin-right: 3px;
@@ -296,9 +344,6 @@ a .icon-angle-right {
 a:hover .icon-angle-right {
   background-color:#005580;
 }
-
-
-
 /*==================================================
   PRETTIFY
 ==================================================*/
@@ -307,11 +352,9 @@ pre.prettyprint {
   border:1px solid #ddd;
   padding:10px;
 }
-.tag {
+.tag, .typ {
   font-weight:bold;
 }
-
-
 /*==================================================
  * Shadow Effect
  * ===============================================*/
@@ -337,9 +380,6 @@ pre.prettyprint {
     -moz-border-radius:100px / 10px;
     border-radius:100px / 10px;
 }
-
-
-
 /*==================================================
   RESPONSIVE
 ==================================================*/
@@ -354,6 +394,7 @@ pre.prettyprint {
   }
 }
 
+
 @media (max-width: 979px){
 
   nav .nav-collapse, nav .logo {
@@ -363,9 +404,10 @@ pre.prettyprint {
 
 }
 
+
 @media (min-width: 800px) {
   body .modal{
-      width: 650px;
+      width: 680px;
       margin-left: -390px; /* - width/2 */
   }
 }

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+ $(document).ready(function(){
 
 
 
@@ -8,6 +8,7 @@ $(document).ready(function(){
         $('body').css('background-color', '#f2f2f2');
     }
 
-
+    //to top
+    $('.top').UItoTop();
 
 });
