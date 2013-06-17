@@ -27,7 +27,7 @@ document.FormVerif.limit.value = count-len;
 
         <h1>API Registration</h1>
 
-          <form class="form-horizontal" name="FormVerif">
+          <form class="form-horizontal" name="formVerif" method="post">
             <div class="row-fluid">
               <fieldset class="boxed">
                   <!-- Form Name -->
@@ -37,7 +37,7 @@ document.FormVerif.limit.value = count-len;
                   <div class="control-group">
                     <label class="control-label" for="radios">Choose your purpose</label>
                     <div class="controls">
-                      <label class="radio"><input id="rdb1" type="radio" name="toggler" value="1"   checked="checked" />I need access to the API for my own ricardo.ch account</label>
+                      <label class="radio"><input id="rdb1" type="radio" name="toggler" value="1" checked="checked" />I need access to the API for my own ricardo.ch account</label>
                       <label class="radio"><input id="rdb2" type="radio" name="toggler" value="2" />I need access to the API to build a tool/app</label>
                       <label class="radio"><input id="rdb3" type="radio" name="toggler" value="3" />I need access to the API for a client</label>
                     </div>
@@ -57,14 +57,18 @@ document.FormVerif.limit.value = count-len;
 
             <div class="row-fluid">
               <?php include_once "inc/form-1.php"; ?>
-              <?php include_once "inc/form-2.php"; ?>
+              <?php // include_once "inc/form-2.php"; ?>
             </div>
 
+          <div class="row-fluid">
+              <div class="form-btns span12 text-right">
+                  <button type="reset" class="btn">Cancel</button>
+                  <button type="submit" id="submit" name="submit" class="btn btn-primary">submit form</button>
+              </div>
+          </div>
+        </fieldset>
 
-
-          </form>
-
-
+      </form>
 
 
     </div>
