@@ -49,3 +49,44 @@
 		</div>
 	</div>
 </div>
+
+
+
+<nav id="headerNav">
+    <div class="navbar container">
+        <div class="row-fluid">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.php" class="logo" contenteditable="true"><img src="../../img/logo.png"><span>API
+                    Information</span></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="dropdown">
+                        <a class="active" href="index.php"> Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href=".php" data-toggle="dropdown" class="dropdown-toggle"> Documentation</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="api-services.php">ricardo API Services</a></li>
+                            <li><a href="api-technical.php">Technical Documentation</a></li>
+                            <li><a href="api-security.php">Security Documentation</a></li>
+                            <li><a href="api-howto.php">How to</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="forum/index.php"> Forum</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="news.php"> News</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="register.php"> Register</a>
+                    </li>
+                </ul>
+            </div><!-- /.nav-collapse -->
+        </div><!-- /navbar-inner -->
+    </div>
+</nav>

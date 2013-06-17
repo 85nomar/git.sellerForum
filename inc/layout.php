@@ -18,7 +18,7 @@
                 	)
 			),
 			'Forum' => array(
-				'url' => 'forum'
+				'url' => 'forum/index'
 			),
 			'News' => array(
 				'url' => 'news'

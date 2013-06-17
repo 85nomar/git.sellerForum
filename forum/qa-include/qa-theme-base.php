@@ -18,6 +18,7 @@
 	code, please consult the online Q2A documentation.
 */
 
+
 	class qa_html_theme_base {
 	
 		var $indent=0;
@@ -38,6 +39,7 @@
 			$this->content=$content;
 			$this->rooturl=$rooturl;
 			$this->request=$request;
+
 		}
 		
 		function output_array($elements)
@@ -165,7 +167,8 @@
 			$this->head();
 			
 			$this->body();   //   Q2A-BS Body Part
-			
+
+
 			$this->output(
 				'</html>'
 			);
@@ -271,7 +274,7 @@
 		
 		function body()
 		{
-			$this->output('<body>');
+			$this->output('<body><div id="wrap">');
 			
 			$this->body_script();
 			
@@ -298,17 +301,12 @@
 		function bs_footer()
 		{
 		
-		$this->output('<footer class="footer">
-						<div class="container">
-						<p class="pull-right"><a href="#">Back to top</a></p>
-						<p><a href="https://github.com/harshjv/q2a-bootstrap">Q2A-Bootstrap Framework</a> developed by <a href="https://github.com/harshjv">Harsh J. Vakharia</a></p>
-						<ul class="footer-links">
-						<li><a href="../">Home</a></li>
-						<li><a href="../feedback">Feedback</a></li>
-						<li><a href="http://twitter.com/harshjv">Twitter</a></li>
-						<li><a href="http://www.facebook.com/hjvakharia">Facebook</a></li>
-						</ul>
-						</div>
+		$this->output('        <div id="push"></div>
+                       </div><!-- END WRAPPER -->
+                       <footer id="footer" class="footer">
+                          <div class="container">
+                            <p class="credit">Copyright © 1999-2013 by  <a href="">ricardo.ch</a> · All rights reserved </p>
+                          </div>
 						</footer>');
 		
 		}
@@ -361,7 +359,7 @@
 			$this->notices();
 			$this->widgets('full', 'top');
 			$this->header();
-			$this->output('<div class="container">');
+			$this->output('<div id="container" class="container">');
 			$this->output('<div class="row">');
 			$this->widgets('full', 'high');
 			$this->output('<div class="span12">');
@@ -452,12 +450,13 @@
 		
 		function navbar_bs()
 		{
-			$this->output('<div class="navbar navbar-fixed-top"><div class="navbar-inner"><div class="container">');
+			$this->output('<div class="navbar"><div class="navbar-inner"><div class="container">');
 			
 			$this->navbar_bs_button();
-			$this->navbar_bs_brand();
-			
-			$this->output('<div class="nav-collapse collapse"><ul class="nav">');
+			//$this->navbar_bs_brand();
+
+
+			$this->output('<div class="nav-collapse collapse pull-right"><ul class="nav">');
 			$this->nav_user_search();
 			$this->output('</ul></div>');
 			$this->output('</div></div></div>');
@@ -473,14 +472,14 @@
 							</button>');
 		
 		}
-		
+
 		function navbar_bs_brand()
 		{
-		
-			$this->output('<a class="brand" href="https://github.com/harshjv/q2a-bootstrap">Q2A-BS</a>');
-		
+			/*$this->output('<a class="brand" href="https://github.com/harshjv/q2a-bootstrap">Q2A-BS</a>');*/
+
 		}
-		
+
+
 		function header()
 		{
 			/*
@@ -499,49 +498,89 @@
 							</ul>
 							</div>
 							</div>');*/
-			
+
 			
 			
 			//$this->below_navbar();
-			$this->output('<div class="navbar">
-						<div class="navbar-inner">');
+
+
+            $this->output('<nav id="headerNav">
+    <div class="navbar container">
+        <div class="row-fluid">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.php" class="logo" contenteditable="true"><img src="../img/logo.png"><span>API
+                    Information</span></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="dropdown">
+                        <a href="../index.php"> Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href=".php" data-toggle="dropdown" class="dropdown-toggle"> Documentation</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../api-services.php">ricardo API Services</a></li>
+                            <li><a href="../api-technical.php">Technical Documentation</a></li>
+                            <li><a href="../api-security.php">Security Documentation</a></li>
+                            <li><a href="../api-howto.php">How to</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="active" href="index.php"> Forum</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../news.php"> News</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="../register.php"> Register</a>
+                    </li>
+                </ul>
+            </div><!-- /.nav-collapse -->
+        </div><!-- /navbar-inner -->
+    </div>
+</nav>');
+
+			$this->output('<div class="subnav">');
 			$this->nav_main_sub();
-			$this->output('</div></div>');//
+			$this->output('</div>');//
 		}
-		
+
 		function below_navbar()
 		{
-		
-		$this->output('<div class="bs-docs-social">
-						<div class="container">
-						<ul class="bs-docs-social-buttons">
-						<li class="muted">Q2A-Bootstrap Framework v1.1</li>
-						<li>
-						<iframe src="http://ghbtns.com/github-btn.html?user=harshjv&repo=q2a-bootstrap&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
-						</li>
-						<li>
-						<iframe src="http://ghbtns.com/github-btn.html?user=harshjv&repo=q2a-bootstrap&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
-						</li>
-						<li class="follow-btn">
-						<a href="https://twitter.com/harshjv" class="twitter-follow-button" data-show-count="false">Follow @harshjv</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-						</li>
-						<li class="tweet-btn">
-						<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://github.com/harshjv" data-text="Sweet and Clean Twitter Bootstrap Theme for Question2Answer.org Developed by Harsh Vakharia" data-via="harshjv" data-count="none">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-						</li>
-						</ul>
-						</div>
-						</div>');
+            /*
+            $this->output('<div class="bs-docs-social">
+                            <div class="container">
+                            <ul class="bs-docs-social-buttons">
+                            <li class="muted">Q2A-Bootstrap Framework v1.1</li>
+                            <li>
+                            <iframe src="http://ghbtns.com/github-btn.html?user=harshjv&repo=q2a-bootstrap&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62px" height="20px"></iframe>
+                            </li>
+                            <li>
+                            <iframe src="http://ghbtns.com/github-btn.html?user=harshjv&repo=q2a-bootstrap&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="53px" height="20px"></iframe>
+                            </li>
+                            <li class="follow-btn">
+                            <a href="https://twitter.com/harshjv" class="twitter-follow-button" data-show-count="false">Follow @harshjv</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            </li>
+                            <li class="tweet-btn">
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://github.com/harshjv" data-text="Sweet and Clean Twitter Bootstrap Theme for Question2Answer.org Developed by Harsh Vakharia" data-via="harshjv" data-count="none">Tweet</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            </li>
+                            </ul>
+                            </div>
+                            </div>');
+            */
 		
 		}
 
 		function nav_user_search()
 		{
 
-			$this->output('<ul class="nav">
-							<li><a href="/">Home</a></li>
-							<li class="divider-vertical"></li>
+			$this->output('
+                            <ul class="nav">
 							<li class="dropdown">
 							<a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#" id="drop1">Browse <b class="caret"></b></a>
 							<ul aria-labelledby="drop1" role="menu" class="dropdown-menu">
@@ -562,14 +601,12 @@
 		
 		function nav_main_sub()
 		{
-			$this->output('<ul class="nav nav-pills">');
+			$this->output('<div class="nav-forum-lvl1 container-fluid"><div class="navbar container"><ul class="nav nav-pills">');
 			$this->nav('main');
-			$this->output('</ul>');
-			$this->output('<div class="qa-nav-main-clear"></div>');
-			$this->output('<div style="height: 40px;"></div>');
-			$this->output('<ul class="nav pager">');
+			$this->output('</ul></div></div>');
+			$this->output('<div class="nav-forum-lvl2 container-fluid"><div class="navbar container"><ul class="nav nav-pills">');
 			$this->nav('sub');
-			$this->output('</ul>');
+			$this->output('</ul></div></div>');
 		}
 		
 		function logo()
@@ -678,7 +715,7 @@
 			if (isset($navlink['url'])) {
 				$this->output(
 					'<A '
-					.((@$navlink['label'] == $hot_label_name_custom) ? ('style="color:#FFFFFF;background-color:#B94A48;"') : '').
+					.((@$navlink['label'] == $hot_label_name_custom) ? ('class="hot"') : '').
 					' HREF="'.$navlink['url'].'">'.$navlink['label'].
 					'</A>'
 				);
