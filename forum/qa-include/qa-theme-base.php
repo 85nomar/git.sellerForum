@@ -584,13 +584,13 @@
 							<li class="dropdown">
 							<a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#" id="drop1">Browse <b class="caret"></b></a>
 							<ul aria-labelledby="drop1" role="menu" class="dropdown-menu">
-							<li><a class="" href="/questions">Questions</a></li>
-							<li><a class="" href="/unanswered">Unanswered</a></li>
-							<li><a class="" href="/activity">Activity</a></li>
-							<li><a class="" href="/tags">Tags</a></li>
-							<li><a class="" href="/users">Users</a></li>
+							<li><a class="" href="/sellerForum/forum/questions">Questions</a></li>
+							<li><a class="" href="/sellerForum/forum/unanswered">Unanswered</a></li>
+							<li><a class="" href="/sellerForum/forum/activity">Activity</a></li>
+							<li><a class="" href="/sellerForum/forum/tags">Tags</a></li>
+							<li><a class="" href="/sellerForum/forum/users">Users</a></li>
 							<li class="divider"></li>
-							<li><a class="" href="/ask">Ask a Question</a></li>
+							<li><a class="" href="/sellerForum/forum//ask">Ask a Question</a></li>
 							</ul>
 							</li>
 							</ul>');
