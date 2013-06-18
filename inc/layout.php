@@ -23,8 +23,8 @@
 			'News' => array(
 				'url' => 'news'
 			),
-			'Register' => array(
-				'url' => 'register'
+			'Request' => array(
+				'url' => 'request'
 			)
 		);
 

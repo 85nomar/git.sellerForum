@@ -222,11 +222,11 @@ div.doc-text p {
 }
 
 /*registration*/
-#registration h4 {
+#request h4 {
   border-bottom:1px solid #ddd;
 }
 
-#registration fieldset.boxed {
+#request fieldset.boxed {
   min-height: 195px;
 }
 

@@ -14,7 +14,7 @@ $Layout->start(); ?>
             <div class="visual-text">
               <h1>GET API ACCESS</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, laboriosam quo obcaecati cum facere nulla quae nisi doloremque quasi autem! Ab nemo explicabo quae officia.        </p><p>
-              <a class="btn btn-primary btn-large" href="#">Register Here! »</a></p>
+              <a class="btn btn-primary btn-large" href="#">Request Here! »</a></p>
             </div>
             <div class="visual-img">
               <img src="img/visual-home.png" />

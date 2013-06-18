@@ -1,6 +1,7 @@
-<?php require('inc/layout.php');
+ <?php require('inc/layout.php');
 
-$Layout->title = 'registration';
+
+$Layout->title = 'request';
 
 $Layout->start(); ?>
 
@@ -25,9 +26,9 @@ document.FormVerif.limit.value = count-len;
     <div id="content" class="container-fluid">
       <div class="container">
 
-        <h1>API Registration</h1>
-
-          <form class="form-horizontal" name="formVerif" method="post">
+        <h1>API Request</h1>
+          <?php  require('inc/validation.php'); ?>
+          <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="formVerif" method="post">
             <div class="row-fluid">
               <fieldset class="boxed">
                   <!-- Form Name -->
@@ -37,9 +38,9 @@ document.FormVerif.limit.value = count-len;
                   <div class="control-group">
                     <label class="control-label" for="radios">Choose your purpose</label>
                     <div class="controls">
-                      <label class="radio"><input id="rdb1" type="radio" name="toggler" value="1" checked="checked" />I need access to the API for my own ricardo.ch account</label>
-                      <label class="radio"><input id="rdb2" type="radio" name="toggler" value="2" />I need access to the API to build a tool/app</label>
-                      <label class="radio"><input id="rdb3" type="radio" name="toggler" value="3" />I need access to the API for a client</label>
+                      <label class="radio radioToggle"><input id="rdb1" type="radio" name="toggler" value="1" checked="checked" />I need access to the API for my own ricardo.ch account</label>
+                      <label class="radio radioToggle"><input id="rdb2" type="radio" name="toggler" value="2" />I need access to the API to build a tool/app</label>
+                      <label class="radio radioToggle"><input id="rdb3" type="radio" name="toggler" value="3" />I need access to the API for a client</label>
                     </div>
                   </div>
 
@@ -55,15 +56,15 @@ document.FormVerif.limit.value = count-len;
               </fieldset>
             </div>
 
-            <div class="row-fluid">
-              <?php include_once "inc/form-1.php"; ?>
-              <?php // include_once "inc/form-2.php"; ?>
+            <div id="formBox" class="row-fluid">
+                <?php include_once "inc/form-1.php"; ?>
             </div>
 
           <div class="row-fluid">
               <div class="form-btns span12 text-right">
+                  <input type="hidden" name="submittedForm" value="1" />
                   <button type="reset" class="btn">Cancel</button>
-                  <button type="submit" id="submit" name="submit" class="btn btn-primary">submit form</button>
+                  <button type="submit" id="submit" name="submit" class="btn btn-primary">submit</button>
               </div>
           </div>
         </fieldset>

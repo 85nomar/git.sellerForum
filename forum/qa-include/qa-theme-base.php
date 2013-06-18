@@ -535,7 +535,7 @@
                         <a href="../news.php"> News</a>
                     </li>
                     <li class="dropdown">
-                        <a href="../register.php"> Register</a>
+                        <a href="../request.php"> Register</a>
                     </li>
                 </ul>
             </div><!-- /.nav-collapse -->

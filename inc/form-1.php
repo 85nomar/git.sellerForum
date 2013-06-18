@@ -1,7 +1,7 @@
 <?php ?>
 
 <!--FORM 1 -->
-<fieldset Id="blk-1" class="toHide">
+<fieldset>
 
   <div class="boxed">
     <h4>personal Information FORM 1</h4>
@@ -10,9 +10,9 @@
       <!-- Text input-->
       <fieldset>
           <div class="control-group">
-            <label class="control-label" for="inputUsername"><span class="required">*</span>username</label>
+            <label class="control-label" for="inputUserName"><span class="required">*</span>username</label>
             <div class="controls">
-              <input id="inputUsername" name="inputUsername" type="text" class="input-large" required>
+              <input id="inputUserName" name="inputUserName" type="text" class="input-large">
               <p><a href="" target="_blank">forgot username</a> or <a href="" target="_blank">register</a></p>
             </div>
           </div>
@@ -22,14 +22,14 @@
       <div class="control-group span6">
           <label class="control-label" for="inputFirstName"><span class="required">*</span>First name</label>
           <div class="controls">
-            <input type="text" id="inputFirstName" name="inputFirstName" required value="<?php if
+            <input type="text" id="inputFirstName" name="inputFirstName" value="<?php if
             (isset ($_POST['inputFirstName'])) {echo $_POST['inputFirstName']; }; ?>">
           </div>
       </div>
       <div class="control-group span6">
           <label class="control-label" for="inputLastName"><span class="required">*</span>Last name</label>
           <div class="controls">
-            <input type="text" id="inputLastName" name="inputLastName" required value="<?php if
+            <input type="text" id="inputLastName" name="inputLastName" value="<?php if
             (isset ($_POST['inputFirstName'])) {echo $_POST['inputFirstName']; }; ?>">
           </div>
       </div>
@@ -40,35 +40,54 @@
       <div class="control-group span6">
           <label class="control-label" for="inputCompany"><span class="required">*</span>Company</label>
           <div class="controls">
-            <input type="text" id="inputCompany" name="inputCompany" required value="<?php if
+            <input type="text" id="inputCompany" name="inputCompany" value="<?php if
             (isset ($_POST['inputCompany'])) {echo $_POST['inputCompany']; }; ?>">
           </div>
       </div>
-      <div class="control-group span6">
-          <label class="control-label" for="inputEntity"><span class="required">*</span>legal entity</label>
-          <div class="controls">
-              <input type="text" id="inputEntity" name="inputEntity" required value="<?php if
-              (isset ($_POST['inputEntity'])) {echo $_POST['inputEntity']; }; ?>">
-          </div>
-      </div>
+        <div class="control-group span6">
+            <label class="control-label" for="inputUrl">website URL</label>
+            <div class="controls">
+                <input type="text" id="inputUrl" name="inputUrl" value="<?php if
+                (isset ($_POST['inputUrl'])) {echo $_POST['inputUrl']; }; ?>">
+            </div>
+        </div>
     </div>
     <div class="row-fluid">
 
       <div class="control-group span6">
-          <label class="control-label" for="inputEmail"><span class="required">*</span>number of employees</label>
+          <label class="control-label" for="inputEmployees"><span class="required">*</span>number of employees</label>
           <div class="controls">
-              <input type="text" id="inputCompany" name="inputCompany" required value="<?php if
-              (isset ($_POST['inputCompany'])) {echo $_POST['inputCompany']; }; ?>">
+              <input type="text" id="inputEmployees" name="inputEmployees" value="<?php if
+              (isset ($_POST['inputEmployees'])) {echo $_POST['inputEmployees']; }; ?>">
+          </div>
+      </div>
+        <div class="control-group span6">
+            <label class="control-label" for="inputEntity"><span class="required">*</span>legal entity</label>
+            <div class="controls">
+                <input type="text" id="inputEntity" name="inputEntity" value="<?php if
+                (isset ($_POST['inputEntity'])) {echo $_POST['inputEntity']; }; ?>">
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+
+      <div class="control-group span6">
+          <label class="control-label" for="inputEmail"><span class="required">*</span>E-Mail</label>
+          <div class="controls">
+              <input type="text" id="inputEmail" name="inputEmail" value="<?php if
+              (isset ($_POST['inputEmail'])) {echo $_POST['inputEmail']; }; ?>">
           </div>
       </div>
       <div class="control-group span6">
-          <label class="control-label" for="inputEmail">website URL</label>
+          <label class="control-label" for="inputPhone"><span class="required">*</span>Phone</label>
           <div class="controls">
-              <input type="text" id="inputCompany" name="inputCompany" required value="<?php if
-              (isset ($_POST['inputCompany'])) {echo $_POST['inputCompany']; }; ?>">
+              <input type="number" id="inputPhone" name="inputPhone" value="<?php if
+              (isset ($_POST['inputPhone'])) {echo $_POST['inputPhone']; }; ?>">
           </div>
       </div>
     </div>
+
+
   </div>
 
 
@@ -114,7 +133,7 @@
           <div class="control-group span6">
               <label class="control-label" for="inputPhone2">Phone</label>
               <div class="controls">
-                  <input type="text" id="inputPhone2" name="inputPhone2" value="<?php if
+                  <input type="number" id="inputPhone2" name="inputPhone2" value="<?php if
                   (isset ($_POST['inputPhone2'])) {echo $_POST['inputPhone2']; }; ?>">
               </div>
           </div>
