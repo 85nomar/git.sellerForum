@@ -5,9 +5,6 @@ $Layout->title = 'request';
 
 $Layout->start(); ?>
 
-
-
-
 <script language=javascript>
     var count = "500";
     function limiter(){
@@ -20,14 +17,18 @@ $Layout->start(); ?>
         }
         document.formVerif.limit.value = count-len;
     }
+
 </script>
 
 <div id="content" class="container-fluid">
     <div class="container">
 
         <h1>API Request</h1>
-        <?php  require('inc/validation.php'); ?>
-        <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="formVerif" method="post">
+
+        <?php  require_once('inc/validation.php'); ?>
+
+        <form method="POST" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="formVerif">
+
             <div class="row-fluid">
                 <fieldset class="boxed">
                     <!-- Form Name -->
@@ -38,14 +39,14 @@ $Layout->start(); ?>
                         <label class="control-label" for="radios">Choose your purpose</label>
                         <div class="controls">
                             <label class="radio radioToggle"><input id="rdb1" type="radio" name="toggler" value="1" autocomplete="off" />I need access to the API for my own ricardo.ch account</label>
-                            <label class="radio radioToggle"><input id="rdb2" type="radio" name="toggler" value="2" autocomplete="off" checked="checked" />I need access to the API to build a tool/app</label>
-                            <label class="radio radioToggle"><input id="rdb3" type="radio" name="toggler" value="3" autocomplete="off" />I need access to the API for a client</label>
+                            <label class="radio radioToggle"><input id="rdb2" type="radio" name="toggler" value="2" autocomplete="off" />I need access to the API to build a tool/app</label>
+                            <label class="radio radioToggle"><input id="rdb3" type="radio" name="toggler" value="3" autocomplete="off" checked="checked"/>I need access to the API for a client</label>
                         </div>
                     </div>
 
                     <!-- Textarea -->
                     <div class="control-group">
-                        <label class="control-label" for="textarea">specific description to your purpose</label>
+                        <label class="control-label" for="inputComment">specific description to your purpose</label>
                         <div class="controls">
                             <textarea name="inputComment" id="inputComment" class="area span11" placeholder="you are allowed to write in French or German"  wrap="physical"
                                       onkeyup="limiter()"  required><?php if
@@ -58,7 +59,7 @@ $Layout->start(); ?>
             </div>
 
             <div id="formBox" class="row-fluid">
-                <?php include_once "inc/form-2.php"; ?>
+                <?php require_once "inc/form-3.php"; ?>
             </div>
 
             <div class="row-fluid">
@@ -71,7 +72,6 @@ $Layout->start(); ?>
             </fieldset>
 
         </form>
-
 
     </div>
 </div><!-- close content -->

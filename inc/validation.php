@@ -1,13 +1,10 @@
 <?php
 
+$my_email = "elmedin.medija@ricardo.ch"; // email address to which the form data will be sent
+$subject = "New API request"; // subject of the email that is sent
 
 /*
-if ($_POST['check'] == 1)
-{
-    $fehler = "";
-    $vorschlag = $_POST['vorschlag'];
-    $kategorie = $_POST['categoryAndLevel'];
-    
+
     function verifyUser($username, $password) {
         global $failure, $user_xml;
         
@@ -27,85 +24,270 @@ if ($_POST['check'] == 1)
         //CONTENT HERE IF TRUE
         echo 'content true!';
     }
-}
 */
 
 // check for form submission - if it doesn't exist then send back to contact form
 if (isset($_POST["submit"]))  {
-    //header("Location: request.php"); exit;
-
-    $radioToggler = $_POST["toggler"];
 
 
-    if ($radioToggler == 1) {
+    //comments letter limit
+    $limit = 500;
 
-        //PERSONAL DATA
-        $user_name = $_POST["inputUserName"];
-        $first_name = $_POST["inputFirstName"];
-        $last_name = $_POST["inputLastName"];
+    //Error Array
+    $error_msg=array();
 
-        $email_address = $_POST["inputEmail"];
-        $phone = $_POST["inputPhone"];
-        $message = $_POST["inputMessage"];
+    //DEFAULT PERSONAL DATA
+    $message = $_POST["inputComment"];
 
-        //COMPANY DATA
-        $company_name = $_POST["inputCompany"];
-        $company_entity = $_POST["inputEntity"];
+    $user_name = $_POST["inputUserName"];
+    $first_name = $_POST["inputFirstName"];
+    $last_name = $_POST["inputLastName"];
+
+    $email_address = trim($_POST["inputEmail"]);
+    $phone = $_POST["inputPhone"];
+
+    //COMPANY DATA
+    $company_name = $_POST["inputCompany"];
+    $company_url = $_POST["inputUrl"];
+    $company_entity = $_POST["inputEntity"];
+    $employees = $_POST["inputEmployees"];
+
+
+    /* ADDITIONAL FIELDS ACCORDING TO CHOSEN FORM*/
+    $radio_toggler = $_POST["toggler"];
+    $form_type = $_POST["formtype"];
+
+    if ($radio_toggler == "1" || $form_type == "1") {
+
+        //chosen option
+        $theme = "I need access to the API for my own ricardo.ch account";
+        $added_title = "Technical impplementation";
 
         //ADDITIONAL DATA
-        $user_name2 = $_POST["inputUserName2"];
+        $company_name2 = $_POST["inputCompany2"];
         $first_name2 = $_POST["inputFirstName2"];
         $last_name2 = $_POST["inputLastName2"];
 
         $phone2 = $_POST["inputPhone2"];
         $email_address2 = $_POST["inputEmail2"];
 
-        // check
-        if (emptyempty($user_name))
-            $error = "You must enter your username.";
-        // check that an email address was entered
-        elseif (emptyempty($first_name))
-            $error = "You must enter your first name.";
-        elseif (emptyempty($last_name))
-            $error = "You must enter your last name.";
-
-
-        elseif (emptyempty($email_address))
-            $error = "You must enter your email address.";
-        // check for a valid email address
-        elseif (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/", $email_address))
-            $error = "You must enter a valid email address.";
-        elseif (emptyemty($phone)) {
-            $error = "Please enter a phone number";
+        //validate
+        if (empty($company_name2)) {
+            $error_msg[] = "Company name cannot be empty";
         }
-        // check that a message was entered
-        elseif (emptyempty($message))
-            $error = "You must enter a message.";
-
-        // check if an error was found - if there was, send the user back to the form
-        if (isset($error)) {
-            header("Location: contact-form.php?e=".urlencode($error)); exit;
+        if (empty($first_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $first_name2)) {
+            $error_msg[] = "The first name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
+            )";
+        }
+        if (empty($last_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $last_name2)) {
+            $error_msg[] = "The last name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
+            )";
         }
 
-        // write the email content
-        $email_content = "Name: $first_name $last_name\n";
-        $email_content .= "Email Address: $email_address\n";
-        $email_content .= "Message:\n\n$message";
+        if (empty($email_address2) || !filter_var($email_address2, FILTER_VALIDATE_EMAIL)) {
+            $error_msg[] = "E-Mail must have a valid format, such as name@mailhost.com";
+        }
+        if (empty($phone2) || !is_numeric($phone2)) {
+            $error_msg[] = "Enter valid phone number";
+        }
 
-        // send the email
-        mail ("al.playero@gmail.com", "New API request", $email_content);
+        $email_added =
+            "Addition: $added_title \n\n" .
+            "Company name: $company_name2 \n" .
+            "Name: $first_name2 $last_name2\n" .
+            "E-Mail: $email_address2\n" .
+            "Phone: $phone2\n";
 
-        // send the user back to the form
-        header("Location: contact-form.php?s=".urlencode("<p class='alert-success'><strong>Thank you for your message</strong><br />We'll contact you as soon as possible.</p>")); exit;
+
+    }elseif($radio_toggler == "2" || $form_type == "2") {
+
+        //chosen option
+        $theme = "I need access to the API to build a tool or app";
 
 
-    }elseif($radioToggler == 2) {
-        echo $radioToggler;
-    }elseif($radioToggler == 3){
-        echo $radioToggler;
+        $message2 = $_POST["inputComment2"];
+
+        if (empty($message2) || !preg_match("/^[0-9A-Za-z\/-\s'\(\)!\?\.,]+$/", $message2) || (strlen($message2) >
+                $limit)) {
+            $error_msg[] = "The Comments field must contain only letters, digits, spaces and basic punctuation (&nbsp;'&nbsp;-&nbsp;,&nbsp;.&nbsp;), and has a limit of 500 characters";
+        }
+
+        $email_added =
+            "About Company:\n\n" .
+            "$message2";
+
+    }elseif($radio_toggler == "3" || $form_type == "3"){
+
+        //chosen option
+        $theme = "I need access to the API for a client";
+        $added_title = "Information about your client";
+
+        $user_name2 = $_POST["inputUserName2"];
+
+        $first_name2 = $_POST["inputFirstName2"];
+        $last_name2 = $_POST["inputLastName2"];
+
+        $email_address2 = trim($_POST["inputEmail2"]);
+        $phone2 = $_POST["inputPhone2"];
+
+        $message2 = $_POST["inputComment2"];
+
+        //COMPANY DATA
+        $company_name2 = $_POST["inputCompany"];
+        $company_url2 = $_POST["inputUrl2"];
+        $company_entity2 = $_POST["inputEntity2"];
+        $employees2 = $_POST["inputEmployees2"];
+
+
+        if (empty($message2) || !preg_match("/^[0-9A-Za-z\/-\s'\(\)!\?\.,]+$/", $message2) || (strlen($message2) >
+                $limit)) {
+            $error_msg[] = "Company description field must contain only letters, digits,
+            spaces and basic punctuation (&nbsp;'&nbsp;-&nbsp;,&nbsp;.&nbsp;), and has a limit of 500 characters";
+        }
+
+        if (empty($user_name2)) {
+            $error_msg[] = "your client's ricardo.ch username cannot be empty";
+        }
+        if (empty($first_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $first_name2)) {
+            $error_msg[] = "your client's first name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
+            )";
+        }
+        if (empty($last_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $last_name2)) {
+            $error_msg[] = "your client's last name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
+            )";
+        }
+        if (empty($company_name2)) {
+            $error_msg[] = "Your client's company name cannot be empty";
+        }
+        if (empty($company_url2) || !filter_var($company_url, FILTER_VALIDATE_URL)) {
+            $error_msg[] = "The client's url is invalid";
+        }
+        if (empty($company_entity2)) {
+            $error_msg[] = "Your client's legal entity cannot be empty";
+        }
+        if (empty($employees2) || !is_numeric($employees2)) {
+            $error_msg[] = "Your client's number of employees is invalid";
+        }
+
+
+        if (empty($email_address2) || !filter_var($email_address2, FILTER_VALIDATE_EMAIL)) {
+            $error_msg[] = "Your client's E-Mail must have a valid format, such as name@mailhost.com";
+        }
+        if (empty($phone2) || !is_numeric($phone2)) {
+            $error_msg[] = "Enter your clien's valid phone number";
+        }
+
+        $email_added =
+            "Addition: $added_title \n\n" .
+            "Name: $first_name2 $last_name2\n" .
+            "username: $user_name2\n" .
+            "E-Mail: $email_address2\n\n" .
+            "Phone: $phone2\n\n" .
+            "About Company:\n" .
+            "subject: $theme2\n" .
+            "$message2\n\n" .
+            "Company name: $company_name2 \n" .
+            "URL: $company_url2 \n" .
+            "Legal entity: $company_entity2 \n" .
+            "Number of employees: $company_employees2 \n\n";
+
     }
 
 
+
+
+    // check
+
+    if (empty($message) || !preg_match("/^[0-9A-Za-z\/-\s'\(\)!\?\.,]+$/", $message) || (strlen($message) >
+            $limit)) {
+        $error_msg[] = "The Comments field must contain only letters, digits, spaces and basic punctuation (&nbsp;'&nbsp;-&nbsp;,&nbsp;.&nbsp;), and has a limit of 500 characters";
+    }
+
+    if (empty($user_name)) {
+        $error_msg[] = "username cannot be empty";
+    }
+    if (empty($first_name) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $first_name)) {
+        $error_msg[] = "The first name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
+            )";
+    }
+    if (empty($last_name) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $last_name)) {
+        $error_msg[] = "The last name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
+            )";
+    }
+
+
+    if (empty($company_name)) {
+        $error_msg[] = "Company name cannot be empty";
+    }
+    if (empty($company_url) || !filter_var($company_url, FILTER_VALIDATE_URL)) {
+        $error_msg[] = "Companie's URL is invalid";
+    }
+    if (empty($company_entity)) {
+        $error_msg[] = "Legal entity cannot be empty";
+    }
+    if (empty($employees) || !is_numeric($employees)) {
+        $error_msg[] = "Number of employees is invalid";
+    }
+
+
+    if (empty($email_address) || !filter_var($email_address, FILTER_VALIDATE_EMAIL)) {
+        $error_msg[] = "Your email must have a valid format, such as name@mailhost.com";
+    }
+    if (empty($phone) || !is_numeric($phone)) {
+        $error_msg[] = "Enter valid phone number";
+    }
+
+
+    $totaltime = time() - $loadtime;
+
+    if($totaltime < 7) {
+        $error_msg[] = "Please fill in the form before submitting!";
+    }
+
+
+    if ($error_msg) {
+        echo '<div class="alert"><ul>';
+        foreach ($error_msg as $err) {
+            echo '<li>'.$err.'</li>';
+        }
+        echo '</ul></div>';
+    }
+
+
+
+    // write the email content
+
+    $email_body =
+        "Name: $first_name $last_name\n" .
+        "username: $user_name\n\n" .
+        "E-Mail: $email_address\n" .
+        "phone: $phone\n\n" .
+        "subject: $theme\n" .
+        "COMMENT:\n\n" .
+
+        "$message\n\n" .
+        "Company name: $company_name \n" .
+        "URL: $company_url \n" .
+        "Legal entity: $company_entity \n" .
+        "Number of employees: $company_employees \n\n";
+
+        $email_messages = $email_body.$email_added;
+
+    if  (!$error_msg) {
+        // send the email
+        mail ($my_email, $subject, $email_messages);
+
+
+        echo '
+
+        <div class="alert alert-success alert-block">
+          <h3>Thank you!</h3>
+            <p>We will get back to you as soon as possible!</p>
+            <a class="btn" href="index.php"><i class="icon-double-angle-left"></i> to homepage</a>
+        </div>
+        ';
+        exit();
+    }
 
 }
 ?>

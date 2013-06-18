@@ -38,15 +38,20 @@
          }
      });
      */
+     //set menue active
+
      $(".radioToggle").click(function(){
-         if ($('input[name=toggler]:checked').val() == "1" ) {
+         var toggleVal = $('input[name=toggler]:checked').val();
+
+         if (toggleVal == 1) {
              window.location.href = 'request.php';
-         }
-         else if ($('input[name=toggler]:checked').val() == "2" ) {
-             window.location.href = 'request2.php';
-         }
-         else if ($('input[name=toggler]:checked').val() == "3" ) {
-             window.location.href = 'request3.php';
+         }else {
+            window.location.href = 'request'+toggleVal+'.php';
          }
      });
+     //set menu as active
+     if ($(location).attr('href').indexOf('request') != -1) {
+         $('.nav>li a[href="request.php"]').addClass('active');
+     }
+
 });

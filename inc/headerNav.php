@@ -6,7 +6,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a href="index.php" class="logo" contenteditable="true"><img src="img/logo.png"/><span>API Information</span></a>
+            <a href="index.php" class="logo"><img src="img/logo.png"/><span>API Intelligence Center</span></a>
             <div class="nav-collapse collapse">
 	            <ul class="nav">
 

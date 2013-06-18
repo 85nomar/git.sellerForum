@@ -5,21 +5,18 @@ $Layout->title = 'request';
 
 $Layout->start(); ?>
 
-
-
-
 <script language=javascript>
-var count = "500"; 
-function limiter(){
-var tex = document.FormVerif.vorschlag.value;
-var len = tex.length;
-if(len > count){
-        tex = tex.substring(0,count);
-        document.FormVerif.vorschlag.value =tex;
-        return false;
-}
-document.FormVerif.limit.value = count-len;
-}
+    var count = "500";
+    function limiter(){
+        var tex = document.formVerif.inputComment.value;
+        var len = tex.length;
+        if(len > count){
+            tex = tex.substring(0,count);
+            document.formVerif.inputComment.value =tex;
+            return false;
+        }
+        document.formVerif.limit.value = count-len;
+    }
 
 </script>
 
@@ -27,8 +24,11 @@ document.FormVerif.limit.value = count-len;
       <div class="container">
 
         <h1>API Request</h1>
-          <?php  require('inc/validation.php'); ?>
-          <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="formVerif" method="post">
+
+          <?php  require_once('inc/validation.php'); ?>
+
+          <form method="POST" class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="formVerif">
+
             <div class="row-fluid">
               <fieldset class="boxed">
                   <!-- Form Name -->
@@ -38,26 +38,29 @@ document.FormVerif.limit.value = count-len;
                   <div class="control-group">
                     <label class="control-label" for="radios">Choose your purpose</label>
                     <div class="controls">
-                      <label class="radio radioToggle"><input id="rdb1" type="radio" name="toggler" value="1" checked="checked" />I need access to the API for my own ricardo.ch account</label>
-                      <label class="radio radioToggle"><input id="rdb2" type="radio" name="toggler" value="2" />I need access to the API to build a tool/app</label>
-                      <label class="radio radioToggle"><input id="rdb3" type="radio" name="toggler" value="3" />I need access to the API for a client</label>
+                      <label class="radio radioToggle"><input id="rdb1" type="radio" name="toggler" value="1" autocomplete="off" checked="checked" />I need access to
+                          the API for my own ricardo.ch account</label>
+                      <label class="radio radioToggle"><input id="rdb2" type="radio" name="toggler" value="2" autocomplete="off" />I need access to the API to build a tool/app</label>
+                      <label class="radio radioToggle"><input id="rdb3" type="radio" name="toggler" value="3" autocomplete="off" />I need access to the API for a client</label>
                     </div>
                   </div>
 
                   <!-- Textarea -->
                   <div class="control-group">
-                    <label class="control-label" for="textarea">specific description to your purpose</label>
-                    <div class="controls">                     
-                      <textarea name="vorschlag" class="area span9" wrap="physical" onkeyup="limiter()" ><?php if (isset($_POST['vorschlag'])) {echo $_POST['vorschlag']; }; ?></textarea>
-                      <p><script language=javascript>document.write("<input class='area-limiter' type=text name=limit readonly value="+count+">");</script></p>
-                    </div>
+                    <label class="control-label" for="inputComment">specific description to your purpose</label>
+                      <div class="controls">
+                          <textarea name="inputComment" id="inputComment" class="area span11" placeholder="you are allowed to write in French or German"  wrap="physical"
+                                    onkeyup="limiter()" required><?php if
+                              (isset($_POST['inputComment'])) {echo $_POST['inputComment']; }; ?></textarea>
+                          <p><script language=javascript>document.write("<input class='area-limiter' type=text name=limit readonly value="+count+">");</script></p>
+                      </div>
                   </div>
 
               </fieldset>
             </div>
 
             <div id="formBox" class="row-fluid">
-                <?php include_once "inc/form-1.php"; ?>
+                <?php require_once "inc/form-1.php"; ?>
             </div>
 
           <div class="row-fluid">
@@ -70,7 +73,6 @@ document.FormVerif.limit.value = count-len;
         </fieldset>
 
       </form>
-
 
     </div>
 </div><!-- close content -->

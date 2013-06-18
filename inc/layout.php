@@ -20,9 +20,9 @@
 			'Forum' => array(
 				'url' => 'forum/index'
 			),
-			'News' => array(
-				'url' => 'news'
-			),
+			//'News' => array(
+			//	'url' => 'news'			),
+
 			'Request' => array(
 				'url' => 'request'
 			)
