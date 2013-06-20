@@ -509,7 +509,7 @@ Body
                 <div id="modal-buyarticle" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h3 id="myModalLabel">List an article</h3>
+                            <h3 id="myModalLabel">Buy an article</h3>
                     </div>
                     <div class="modal-inner">
                         <img src="img/docu/show-placeBidBuyNow.png" />

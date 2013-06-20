@@ -31,11 +31,11 @@
 							$dropChildren = '';
 						}
 						?>
-						<a <?php echo $isActive ? ' class="active"' : '' ?> href="<?php echo $thisURL?>.php"  <?php echo $dropChildren; ?>  > <?php echo $pageName?></a>
+						<a <?php echo $isActive ? ' class="active"' : '' ?> href="<?php echo $thisURL?>.html"  <?php echo $dropChildren; ?>  > <?php echo $pageName?></a>
 						<?php if(isset($page['children'])): ?>
 							<ul class="dropdown-menu">
 								<?php foreach($page['children'] as $childName => $childURL) : ?>
-								<li><a<?php echo $this->navLvl2 == $childURL ? ' class="active"' : '' ?> href="<?php echo $childURL?>.php"><?php echo $childName?></a></li>
+								<li><a<?php echo $this->navLvl2 == $childURL ? ' class="active"' : '' ?> href="<?php echo $childURL?>.html"><?php echo $childName?></a></li>
 								<?php endforeach?>
 							</ul>
 						<?php endif;?>
