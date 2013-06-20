@@ -44,7 +44,6 @@ $Layout->start(); ?>
                       <label class="radio radioToggle"><input id="rdb3" type="radio" name="toggler" value="3" autocomplete="off" />I need access to the API for a client</label>
                     </div>
                   </div>
-
                   <!-- Textarea -->
                   <div class="control-group">
                     <label class="control-label" for="inputComment">specific description to your purpose</label>

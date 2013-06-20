@@ -50,7 +50,7 @@ $Layout->start(); ?>
 					</div>
 					<div class="sectioned">
 						<h5>I need to display some sections later</h5>
-						<p>You can retrieve each section with its dedicated method:</p>						
+						<p>You can retrieve each section with its dedicated method:</p>
 						<ul>
 							<li>Auction description :<a href="https://ws.betaqxl.com/ricardoApi/documentation/technical/html/M_Ricardo_Api_Contracts_ISearchService_GetAuctionDescription.htm" target="_blank">SearchService.GetAuctionDescription</a></li>
 							<li>Auction information :<a href="https://ws.betaqxl.com/ricardoApi/documentation/technical/html/M_Ricardo_Api_Contracts_ISearchService_GetAuctionInformation.htm" target="_blank">SearchService.GetAuctionInformation</a></li>
@@ -166,8 +166,8 @@ Body
     }
 }</pre>
 
-					<h4>SOAP Example</h4>
-					<pre class="prettyprint"><xmp><s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+                    <h4>SOAP Example</h4>
+                    <pre class="prettyprint"><xmp><s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope">
   <s:Header>
     <a:Action s:mustUnderstand="1">http://ricardo.api/ISearchService/SimpleSearch</a:Action>
     <a:MessageID>urn:uuid:f051e95d-d04c-4bc3-aba1-5bd2209be312</a:MessageID>

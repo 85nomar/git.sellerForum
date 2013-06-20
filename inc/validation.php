@@ -1,10 +1,9 @@
 <?php
 
-$my_email = "elmedin.medija@ricardo.ch"; // email address to which the form data will be sent
+$my_email = "nobel.martinez@ricardo.ch"; // email address to which the form data will be sent
 $subject = "New API request"; // subject of the email that is sent
 
 /*
-
     function verifyUser($username, $password) {
         global $failure, $user_xml;
         
@@ -57,6 +56,8 @@ if (isset($_POST["submit"]))  {
     $radio_toggler = $_POST["toggler"];
     $form_type = $_POST["formtype"];
 
+
+    // REQUEST FORM 1
     if ($radio_toggler == "1" || $form_type == "1") {
 
         //chosen option
@@ -99,7 +100,9 @@ if (isset($_POST["submit"]))  {
             "Phone: $phone2\n";
 
 
-    }elseif($radio_toggler == "2" || $form_type == "2") {
+    }
+    // REQUEST FORM 2
+    elseif($radio_toggler == "2" || $form_type == "2") {
 
         //chosen option
         $theme = "I need access to the API to build a tool or app";
@@ -113,10 +116,12 @@ if (isset($_POST["submit"]))  {
         }
 
         $email_added =
-            "About Company:\n\n" .
+            "COMMENT:\n" .
             "$message2";
 
-    }elseif($radio_toggler == "3" || $form_type == "3"){
+    }
+    // REQUEST FORM 3
+    elseif($radio_toggler == "3" || $form_type == "3"){
 
         //chosen option
         $theme = "I need access to the API for a client";
@@ -183,13 +188,13 @@ if (isset($_POST["submit"]))  {
             "username: $user_name2\n" .
             "E-Mail: $email_address2\n\n" .
             "Phone: $phone2\n\n" .
-            "About Company:\n" .
+            "COMMENT:\n" .
             "subject: $theme2\n" .
             "$message2\n\n" .
             "Company name: $company_name2 \n" .
             "URL: $company_url2 \n" .
             "Legal entity: $company_entity2 \n" .
-            "Number of employees: $company_employees2 \n\n";
+            "Number of employees: $employees2 \n\n";
 
     }
 
@@ -219,9 +224,16 @@ if (isset($_POST["submit"]))  {
     if (empty($company_name)) {
         $error_msg[] = "Company name cannot be empty";
     }
-    if (empty($company_url) || !filter_var($company_url, FILTER_VALIDATE_URL)) {
+    /*if (empty($company_url) || !filter_var($company_url, FILTER_VALIDATE_URL)) {
+        $error_msg[] = "Companie's URL is invalid";
+    }*/
+
+    if (!preg_match('/^(http|https|ftp):\/\/([A-Z0-9][A-Z0-9_-]*(?:\.[A-Z0-9][A-Z0-9_-]*)+):?(\d+)?\/?/i', $company_url)) {
         $error_msg[] = "Companie's URL is invalid";
     }
+
+
+
     if (empty($company_entity)) {
         $error_msg[] = "Legal entity cannot be empty";
     }
@@ -233,6 +245,9 @@ if (isset($_POST["submit"]))  {
     if (empty($email_address) || !filter_var($email_address, FILTER_VALIDATE_EMAIL)) {
         $error_msg[] = "Your email must have a valid format, such as name@mailhost.com";
     }
+
+
+
     if (empty($phone) || !is_numeric($phone)) {
         $error_msg[] = "Enter valid phone number";
     }
@@ -254,7 +269,6 @@ if (isset($_POST["submit"]))  {
     }
 
 
-
     // write the email content
 
     $email_body =
@@ -263,15 +277,17 @@ if (isset($_POST["submit"]))  {
         "E-Mail: $email_address\n" .
         "phone: $phone\n\n" .
         "subject: $theme\n" .
-        "COMMENT:\n\n" .
+        "COMMENT:\n" .
 
         "$message\n\n" .
         "Company name: $company_name \n" .
         "URL: $company_url \n" .
         "Legal entity: $company_entity \n" .
-        "Number of employees: $company_employees \n\n";
+        "Number of employees: $employees \n\n";
 
         $email_messages = $email_body.$email_added;
+
+
 
     if  (!$error_msg) {
         // send the email

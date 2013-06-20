@@ -532,9 +532,6 @@
                         <a class="active" href="index.php"> Forum</a>
                     </li>
                     <li class="dropdown">
-                        <a href="../news.php"> News</a>
-                    </li>
-                    <li class="dropdown">
                         <a href="../request.php"> Register</a>
                     </li>
                 </ul>
@@ -819,7 +816,7 @@
 			$favorite=@$this->content['favorite'];
 			
 			if (isset($favorite))
-				$this->output('<FORM '.$favorite['form_tags'].'>');
+			$this->output('<FORM '.$favorite['form_tags'].'>');
 			$this->output('<div class="page-header">');
 			$this->output('<h1>');
 			$this->favorite();
