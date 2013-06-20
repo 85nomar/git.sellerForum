@@ -166,6 +166,13 @@ header {
   padding-left:0;
 }
 
+.visual-text>p {
+    font-size: 180%;
+    font-weight: normal;
+    line-height: 25px;
+    font-family: 'MetaOTLight', sans-serif;
+}
+
 .boxed {
   /*background:#f9f9f9;*/
   min-height:140px;
@@ -181,6 +188,23 @@ header {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-sizing:border-box;
   -moz-box-sizing:border-box;
+}
+
+/* homepage */
+.date-box {
+    background: none repeat scroll 0 0 #E8E8E8;
+    border-radius: 4px 4px 4px 4px;
+    color: #999999;
+    display: block;
+    float: left;
+    margin-right: 6px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,.3);
+}
+.date-box .day {
+    font-size: 120%;
+    display: block;
+    font-weight: bold;
 }
 
 /*documentation content*/
