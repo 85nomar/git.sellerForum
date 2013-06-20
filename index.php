@@ -39,7 +39,7 @@ $Layout->start(); ?>
             <div class="span9">
                 <p>We are announcing the launch of our new API developer site and the new Ricardo API. Great news for sellers.</p>
                 <p>Most importantly, this is just the beginning. We will continuously add new. The features are based on the learning.</p>
-                <p>Feel free to write your thoughts in the forum section.</p>
+                <p>Feel free to write your thoughts in the <a href="forum/index.html" title="to our API Forum" >forum section</a>.</p>
                 <!-- <p><a class="btn-anchor" href="news.html"><i class="icon-angle-right"></i>View details</a></p> -->
             </div>
         </div>
@@ -69,7 +69,7 @@ $Layout->start(); ?>
               </div>
               <div class="span9">
                   <p>We have changed the registration procedure to make it easier and more comfortable to get access to our API.</p>
-                  <p>You will find the new “request form” directly on our website. Please provide us all the necessary information, so we can process your request as quickly as possible. It is important to submit us the request even though you have already get access to the old API.</p>
+                  <p>You will find the new “<a href="request.html">request form</a>” directly on our website. Please provide us all the necessary information, so we can process your request as quickly as possible. It is important to submit us the request even though you have already get access to the old API.</p>
                   <!-- <p><a class="btn-anchor" href="news.html"><i class="icon-angle-right"></i>View details</a></p> -->
               </div>
           </div>

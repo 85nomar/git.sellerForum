@@ -1,5 +1,7 @@
  $(document).ready(function(){
 
+     //change forum link back to .php
+     $('.nav>li a[href="forum/index.html"]').attr('href', 'forum/index.php');
 
     //colorize body
     if ($('#wrap .content-bottom:first').length > 0) {
@@ -17,25 +19,6 @@
              $("#blk-"+$(this).val()).show('slow');
 
          });
-     });
-
-     $(".toHide").css("display","none");
-     $(".radioToggle").click(function(){
-         if ($('input[name=toggler]:checked').val() == "1" ) {
-             $("#blk-1").slideDown("fast"); //Slide Down Effect
-         } else {
-            $("#blk-1").slideUp("fast");  //Slide Up Effect
-         }
-         if ($('input[name=toggler]:checked').val() == "2" ) {
-             $("#blk-2").slideDown("fast"); //Slide Down Effect
-         } else {
-             $("#blk-2").slideUp("fast");  //Slide Up Effect
-         }
-         if ($('input[name=toggler]:checked').val() == "3" ) {
-             $("#blk-3").slideDown("fast"); //Slide Down Effect
-         } else {
-             $("#blk-3").slideUp("fast");  //Slide Up Effect
-         }
      });
      */
      //set menue active

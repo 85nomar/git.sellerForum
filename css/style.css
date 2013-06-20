@@ -72,8 +72,7 @@ h4:first-child {
 h5 {
   color: #555;
   font-size: 16px;
-  border-bottom: 3px dotted #ddd;
-  background: #ddd;
+  background: #E8E8E8;
   padding: 5px 10px;
   border-radius: 4px;
   padding-top: 10px;
@@ -341,6 +340,16 @@ a.active {background:#ddd;}
 /*==================================================
   FORM
 ==================================================*/
+
+fieldset {
+    padding:0 !important;
+}
+fieldset h4 {
+    padding: 10px 0px;
+    margin: 0 10px 10px;
+}
+
+
 .form-btns {
   padding:10px 0;
 }
@@ -351,8 +360,8 @@ a.active {background:#ddd;}
 }
 .area-limiter {
   width: 25px;
-  margin-top: -52px;
-  border-radius: 0 4px 0 4px !important;
+  width: 25px;
+  border-radius: 4px;
 }
 
 .required {
@@ -360,6 +369,14 @@ a.active {background:#ddd;}
     color:#C34345;
     padding:5px
 }
+
+.sub-info {
+    margin: 10px 10px 20px;
+    background: #E8E8E8;
+    padding: 10px;
+    border-radius: 4px;
+}
+
 
 /*==================================================
   BOOTSTRAP

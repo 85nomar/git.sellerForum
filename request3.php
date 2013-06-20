@@ -51,7 +51,7 @@ $Layout->start(); ?>
                             <textarea name="inputComment" id="inputComment" class="area span11" placeholder="you are allowed to write in French or German"  wrap="physical"
                                       onkeyup="limiter()"  required><?php if
                                 (isset($_POST['inputComment'])) {echo $_POST['inputComment']; }; ?></textarea>
-                            <p><script language=javascript>document.write("<input class='area-limiter' type=text name=limit readonly value="+count+">");</script></p>
+                                <script language=javascript>document.write("<input class='area-limiter' type=text name=limit readonly value="+count+">");</script>
                         </div>
                     </div>
 

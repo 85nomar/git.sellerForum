@@ -1,6 +1,6 @@
-<fieldset>
-  <input type="hidden" name="formtype" value="2" />
-  <div class="boxed">
+<input type="hidden" name="formtype" value="2" />
+<fieldset class="boxed">
+    <div>
         <h4>personal Information</h4>
 
         <div class="row-fluid">
@@ -44,7 +44,7 @@
             <div class="control-group span6">
                 <label class="control-label" for="inputUrl">website URL</label>
                 <div class="controls">
-                    <input type="text" id="inputUrl" name="inputUrl"  placeholder="e. g. http://www.example.com"value="<?php if
+                    <input type="text" id="inputUrl" name="inputUrl"  placeholder="www.example.com"value="<?php if
                     (isset ($_POST['inputUrl'])) {echo $_POST['inputUrl']; }; ?>" required />
                 </div>
             </div>
@@ -61,7 +61,7 @@
             <div class="control-group span6">
                 <label class="control-label" for="inputEntity">legal entity</label>
                 <div class="controls">
-                    <input type="text" id="inputEntity" name="inputEntity" value="<?php if
+                    <input type="text" id="inputEntity" name="inputEntity" placeholder="AG, GmbH ..." value="<?php if
                     (isset ($_POST['inputEntity'])) {echo $_POST['inputEntity']; }; ?>" required />
                 </div>
             </div>
@@ -71,7 +71,7 @@
             <div class="control-group span6">
                 <label class="control-label" for="inputEmail">E-Mail</label>
                 <div class="controls">
-                    <input type="text" id="inputEmail" name="inputEmail" value="<?php if
+                    <input type="text" id="inputEmail" name="inputEmail" placeholder="name@example.ch" value="<?php if
                     (isset ($_POST['inputEmail'])) {echo $_POST['inputEmail']; }; ?>" required />
                 </div>
             </div>

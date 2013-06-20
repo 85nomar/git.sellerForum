@@ -522,17 +522,17 @@
                     <li class="dropdown">
                         <a href=".php" data-toggle="dropdown" class="dropdown-toggle"> Documentation</a>
                         <ul class="dropdown-menu">
-                            <li><a href="../api-services.php">ricardo API Services</a></li>
-                            <li><a href="../api-technical.php">Technical Documentation</a></li>
-                            <li><a href="../api-security.php">Security Documentation</a></li>
-                            <li><a href="../api-howto.php">How to</a></li>
+                            <li><a href="../api-services.html">ricardo API Services</a></li>
+                            <li><a href="../api-technical.html">Technical Documentation</a></li>
+                            <li><a href="../api-security.html">Security Documentation</a></li>
+                            <li><a href="../api-howto.html">How to</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a class="active" href="index.php"> Forum</a>
                     </li>
                     <li class="dropdown">
-                        <a href="../request.php"> Register</a>
+                        <a href="../request.php"> Request</a>
                     </li>
                 </ul>
             </div><!-- /.nav-collapse -->

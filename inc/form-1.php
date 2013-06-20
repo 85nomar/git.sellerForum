@@ -1,6 +1,6 @@
-<fieldset>
-  <input type="hidden" name="formtype" value="1" />
-  <div class="boxed">
+<fieldset class="boxed">
+  <div>
+    <input type="hidden" name="formtype" value="1" />
     <h4>personal Information</h4>
 
     <div class="row-fluid">
@@ -44,7 +44,7 @@
         <div class="control-group span6">
             <label class="control-label" for="inputUrl">website URL</label>
             <div class="controls">
-                <input type="text" id="inputUrl" name="inputUrl"  placeholder="e. g. http://www.example.com"value="<?php if
+                <input type="text" id="inputUrl" name="inputUrl"  placeholder="e.g. www.example.com"value="<?php if
                 (isset ($_POST['inputUrl'])) {echo $_POST['inputUrl']; }; ?>" required />
             </div>
         </div>
@@ -61,7 +61,7 @@
         <div class="control-group span6">
             <label class="control-label" for="inputEntity">legal entity</label>
             <div class="controls">
-                <input type="text" id="inputEntity" name="inputEntity" value="<?php if
+                <input type="text" id="inputEntity" name="inputEntity" placeholder="AG, GmbH, ..." value="<?php if
                 (isset ($_POST['inputEntity'])) {echo $_POST['inputEntity']; }; ?>" required />
             </div>
         </div>
@@ -71,7 +71,7 @@
       <div class="control-group span6">
           <label class="control-label" for="inputEmail">E-Mail</label>
           <div class="controls">
-              <input type="text" id="inputEmail" name="inputEmail" value="<?php if
+              <input type="text" id="inputEmail" name="inputEmail" placeholder="name@example.ch" value="<?php if
               (isset ($_POST['inputEmail'])) {echo $_POST['inputEmail']; }; ?>" required />
           </div>
       </div>
@@ -89,10 +89,10 @@
 </fieldset>
 
 
-<fieldset>
-  <div class="boxed">
+<fieldset class="boxed">
+  <div>
     <h4>Technical implementation</h4>
-     <p>Please complete this fields, if you don't do the implementation by yourself</p>
+    <p class="sub-info">Please complete this fields, if you don't do the implementation by yourself</p>
     <div class="row-fluid">
 
       <div class="control-group span6">
@@ -123,7 +123,7 @@
           <div class="control-group span6">
               <label class="control-label" for="inputEmail2">E-Mail</label>
               <div class="controls">
-                  <input type="text" id="inputEmail2" name="inputEmail2" value="<?php if
+                  <input type="text" id="inputEmail2" name="inputEmail2" placeholder="name@example.ch" value="<?php if
                   (isset ($_POST['inputEmail2'])) {echo $_POST['inputEmail2']; }; ?>" required />
               </div>
           </div>
