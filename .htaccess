@@ -1,7 +1,10 @@
-#get .php to .html
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)\.html $1\.php
+#</IfModule>
+
 RewriteEngine on
 RewriteRule ^(.*).html$ $1.php
-
-# .htm und .html von PHP parsen lassen
-#  AddType application/x-httpd-php .htm .html
-

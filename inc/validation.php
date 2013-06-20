@@ -164,9 +164,10 @@ if (isset($_POST["submit"]))  {
         if (empty($company_name2)) {
             $error_msg[] = "Your client's company name cannot be empty";
         }
-        if (empty($company_url2) || !filter_var($company_url, FILTER_VALIDATE_URL)) {
-            $error_msg[] = "The client's url is invalid";
+        if (!preg_match('/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i', $company_url2)) {
+            $error_msg[] = "Companie's URL is invalid";
         }
+
         if (empty($company_entity2)) {
             $error_msg[] = "Your client's legal entity cannot be empty";
         }
@@ -228,10 +229,9 @@ if (isset($_POST["submit"]))  {
         $error_msg[] = "Companie's URL is invalid";
     }*/
 
-    if (!preg_match('/^(http|https|ftp):\/\/([A-Z0-9][A-Z0-9_-]*(?:\.[A-Z0-9][A-Z0-9_-]*)+):?(\d+)?\/?/i', $company_url)) {
+    if (!preg_match('/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i', $company_url)) {
         $error_msg[] = "Companie's URL is invalid";
     }
-
 
 
     if (empty($company_entity)) {
@@ -251,14 +251,6 @@ if (isset($_POST["submit"]))  {
     if (empty($phone) || !is_numeric($phone)) {
         $error_msg[] = "Enter valid phone number";
     }
-
-
-    $totaltime = time() - $loadtime;
-
-    if($totaltime < 7) {
-        $error_msg[] = "Please fill in the form before submitting!";
-    }
-
 
     if ($error_msg) {
         echo '<div class="alert"><ul>';
@@ -286,8 +278,6 @@ if (isset($_POST["submit"]))  {
         "Number of employees: $employees \n\n";
 
         $email_messages = $email_body.$email_added;
-
-
 
     if  (!$error_msg) {
         // send the email

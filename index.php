@@ -14,7 +14,7 @@ $Layout->start(); ?>
             <div class="visual-text">
               <h1>GET API ACCESS</h1>
               <p>Make a step forward and get your API access. Increase your sales revenue and reduce the administration cost<p>
-              <a class="btn btn-primary btn-large" href="request.php">Request Form! »</a></p>
+              <a class="btn btn-primary btn-large" href="request.html">Request Form! »</a></p>
             </div>
             <div class="visual-img">
               <img src="img/visual-home.png" />
@@ -25,7 +25,7 @@ $Layout->start(); ?>
     </div>
 
 
-  </div><!-- close content --> 
+  </div><!-- close content -->
   <div class="content-bottom container">
     <div class="row-fluid">
       <div class="span4">
@@ -41,7 +41,7 @@ $Layout->start(); ?>
         </ul>
         <p>Most importantly, this is just a starting point. We will continue to add new features based on what we
             need and what we learn. Feel free to write your thoughts in Forum section.</p>
-        <p><a class="btn-anchor" href="news.php"><i class="icon-angle-right"></i>View details</a>
+        <p><a class="btn-anchor" href="news.html"><i class="icon-angle-right"></i>View details</a>
         </p>
       </div>
       <div class="span4">
@@ -49,15 +49,15 @@ $Layout->start(); ?>
         <p>
             It’s going to be a busy summer and therefore we already release this version of the new API so the planning can start on your side. The API development will be an ongoing process and you’ll find here the latest changes and updates which will be implemented during this summer. From beginning of 1st July you’ll be able to connect your shop to our test environment to test it and make sure all works fine.        </p>
         <p> Feel free to write your thoughts in Forum section</p>
-            <p><a class="btn-anchor" href="news.php"><i class="icon-angle-right"></i>View details</a></p>
+            <p><a class="btn-anchor" href="news.html"><i class="icon-angle-right"></i>View details</a></p>
       </div>
       <div class="span4">
         <h3>How to get access to the API</h3>
           <p>We have changed the registration procedure to make it more simple and fast for you to get started.
-              Please fill out the request form which you find <a href="request.php">here</a></p>
+              Please fill out the request form which you find <a href="request.html">here</a></p>
 
         <p>
-           <a class="btn-anchor" href="news.php"><i class="icon-angle-right"></i>View details</a>
+           <a class="btn-anchor" href="news.html"><i class="icon-angle-right"></i>View details</a>
         </p>
       </div>
     </div>
