@@ -243,11 +243,6 @@ div.doc-text p {
     outline:none;
 }
 
-/*registration*/
-#request h4 {
-  border-bottom:1px solid #ddd;
-}
-
 /*footer*/
 #footer {
   background:#c5c5c5;
@@ -335,6 +330,10 @@ a.active {background:#ddd;}
   FORM
 ==================================================*/
 
+#request h4 {
+    border-bottom:1px solid #ddd;
+}
+
 fieldset {
     padding:0 !important;
 }
@@ -367,15 +366,22 @@ fieldset h4 {
 .sub-info {
     margin: 10px 10px 20px;
     background: #E8E8E8;
-    padding: 0 10px;
+    padding:5px 10px;
     border-radius: 4px;
 }
 
-.sub-info p {
-    margin:0;
-    padding-top:7px;
+.sub-info div {
+    display: inline-block;
 }
 
+.sub-info span {
+    padding: 3px 0;
+    margin-top: 2px;
+    margin-right: 20px;
+}
+.sub-info .radio.inline {
+    padding-top:0;
+}
 /*==================================================
   BOOTSTRAP
 ==================================================*/

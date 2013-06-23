@@ -94,8 +94,8 @@
     <h4>Technical implementation</h4>
     <!-- Multiple Radios (inline) -->
     <div class="row sub-info">
-        <div class="span5"><p>Are you doing the implementation by yourself?</p></div>
-        <div class="span7">
+        <div><span>Are you doing the implementation by yourself?</span></div>
+        <div span="4">
             <label class="radio inline" for="radio-drop-1">
                 <input type="radio" name="radio-drop" id="radio-drop-1" value="1" autocomplete="off" checked="checked">
                 No
