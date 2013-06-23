@@ -314,8 +314,7 @@
 		function bootstrap_script()
 		{
 			$this->output(
-			'<script src="../assets/js/bootstrap.min.js"></script>
-			<script src="../assets/js/jquery.js"></script>'
+			'<script src="../assets/js/bootstrap.min.js"></script>'
 			);
 		}
 
@@ -456,7 +455,7 @@
 			//$this->navbar_bs_brand();
 
 
-			$this->output('<div class="nav-collapse collapse pull-right"><ul class="nav">');
+			$this->output('<div class="nav pull-right"><ul class="nav">');
 			$this->nav_user_search();
 			$this->output('</ul></div>');
 			$this->output('</div></div></div>');
@@ -465,11 +464,11 @@
 		function navbar_bs_button()
 		{
 		
-			$this->output('<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+			/*$this->output('<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
-							</button>');
+							</button>');*/
 		
 		}
 
@@ -523,8 +522,7 @@
                         <a href=".php" data-toggle="dropdown" class="dropdown-toggle"> Documentation</a>
                         <ul class="dropdown-menu">
                             <li><a href="../api-services.html">ricardo API Services</a></li>
-                            <li><a href="../api-technical.html">Technical Documentation</a></li>
-                            <li><a href="../api-security.html">Security Documentation</a></li>
+                            <li><a href="https://ws.ricardo.ch/ricardoApi/documentation/technical/index.html">Technical Documentation</a></li>
                             <li><a href="../api-howto.html">How to</a></li>
                         </ul>
                     </li>
@@ -581,13 +579,13 @@
 							<li class="dropdown">
 							<a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#" id="drop1">Browse <b class="caret"></b></a>
 							<ul aria-labelledby="drop1" role="menu" class="dropdown-menu">
-							<li><a class="" href="/sellerForum/forum/questions">Questions</a></li>
-							<li><a class="" href="/sellerForum/forum/unanswered">Unanswered</a></li>
-							<li><a class="" href="/sellerForum/forum/activity">Activity</a></li>
-							<li><a class="" href="/sellerForum/forum/tags">Tags</a></li>
-							<li><a class="" href="/sellerForum/forum/users">Users</a></li>
+							<li><a class="" href="/forum/questions">Questions</a></li>
+							<li><a class="" href="/forum/unanswered">Unanswered</a></li>
+							<li><a class="" href="/forum/activity">Activity</a></li>
+							<li><a class="" href="/forum/tags">Tags</a></li>
+							<li><a class="" href="/forum/users">Users</a></li>
 							<li class="divider"></li>
-							<li><a class="" href="/sellerForum/forum//ask">Ask a Question</a></li>
+							<li><a class="" href="/forum//ask">Ask a Question</a></li>
 							</ul>
 							</li>
 							</ul>');

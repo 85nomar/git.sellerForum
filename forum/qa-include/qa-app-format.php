@@ -974,7 +974,6 @@
 		if (qa_to_override(__FUNCTION__)) { $args=func_get_args(); return qa_call_override(__FUNCTION__, $args); }
 		
 		$htmlmessage=qa_lang_html('main/suggest_ask');
-		
 		return strtr(
 			$htmlmessage,
 			

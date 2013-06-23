@@ -37,4 +37,10 @@
          $('.nav>li a[href="request.php"]').addClass('active');
      }
 
+
+
+     /* Q2A FORUM */
+
+     //bottom info
+     $('.span12 .alert-success').append('<span class="pull-right">We provide you an answer within 72 hours</span>');
 });

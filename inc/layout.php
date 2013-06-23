@@ -12,7 +12,7 @@
 				'url' => '',
                 'children' => array(
                 	'ricardo API Services' => 'api-services',
-                	'Technical Documentation' => 'https://ws.betaqxl.com/ricardoApi/documentation/technical/index',
+                	'Technical Documentation' => 'https://ws.ricardo.ch/ricardoApi/documentation/technical/index',
                 	//'Security Documentation' => 'api-security',
                 	'How to' => 'api-howto',
                 	)

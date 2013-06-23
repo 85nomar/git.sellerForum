@@ -426,12 +426,18 @@ pre.prettyprint {
 
 
 /*==================================================
-  FORUM
+  Q2A FORUM
 ==================================================*/
+
+body {
+    overflow-x: hidden;
+}
 
 /*subnav*/
 .subnav{
     background:#F79623;
+    margin-left:-20px;
+    margin-right:-20px;
 }
 .nav-forum-lvl1 .nav li > a {
     color:#fff;
@@ -457,6 +463,11 @@ pre.prettyprint {
     color:#B94A48;
     font-weight:bold;
 }
+
+.TitleName {
+    width:100%;
+}
+
 /*==================================================
   RESPONSIVE
 ==================================================*/
@@ -469,6 +480,11 @@ pre.prettyprint {
     padding-left: 20px;
     padding-right: 20px;
   }
+
+
+ /*Q2A*/
+ .subnav:after,.nav .divider-vertical  {display: none;}
+
 }
 
 

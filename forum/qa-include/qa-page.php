@@ -681,9 +681,11 @@
 					$qa_content['notices'][]=qa_notice_form('welcome', qa_opt('notice_welcome'));
 		}
 		
-		$qa_content['script_rel']=array('qa-content/jquery-1.7.2.min.js');
+		$qa_content['script_rel']=array('../../assets/js/jquery.min.js');
 		$qa_content['script_rel'][]='qa-content/qa-page.js?'.QA_VERSION;
-		
+        $qa_content['script_rel'][]='../../js/scroll-top.js?';
+        $qa_content['script_rel'][]='../../js/scripts.js?';
+
 		if ($voting)
 			$qa_content['error']=@$qa_vote_error_html;
 			
@@ -698,7 +700,8 @@
 
 	function qa_get_start()
 /*
-	Get the start parameter which should be used, as constrained by the setting in qa-config.php
+	Get the start parameter which should be used, as con
+strained by the setting in qa-config.php
 */
 	{
 		return min(max(0, (int)qa_get('start')), QA_MAX_LIMIT_START);
