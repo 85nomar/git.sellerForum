@@ -12,18 +12,10 @@
     $('.top').UItoTop();
 
 
-    //form
-	/*$(function() {
-         $("[name=toggler]").click(function(){
-             $('.toHide').hide();
-             $("#blk-"+$(this).val()).show('slow');
+    /*form*/
 
-         });
-     });
-     */
-     //set menue active
-
-     $(".radioToggle").click(function(){
+     //get the choosed form
+     $(".radioToggle").on('click', function(){
          var toggleVal = $('input[name=toggler]:checked').val();
 
          if (toggleVal == 1) {
@@ -32,12 +24,22 @@
             window.location.href = 'request'+toggleVal+'.php';
          }
      });
-     //set menu as active
+
+     //Request form: Keep request link as active
      if ($(location).attr('href').indexOf('request') != -1) {
          $('.nav>li a[href="request.php"]').addClass('active');
      }
 
-
+     //radio choice form1: (hide as default)
+     $("[name=radio-drop]").on('click', function(){
+        if($(this).val() == 2) {
+            $('.form-drop:first').slideUp(250);
+            $('.form-drop:first input').removeAttr('required');
+        }else {
+            $('.form-drop:first').slideDown(250);
+            $('.form-drop:first input').attr('required', 'required');
+        }
+     });
 
      /* Q2A FORUM */
 

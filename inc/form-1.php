@@ -90,20 +90,33 @@
 
 
 <fieldset class="boxed">
-  <div>
-    <h4>Technical implementation</h4>
-    <p class="sub-info">Please complete this fields, if you don't do the implementation by yourself</p>
-    <div class="row-fluid">
 
-      <div class="control-group span6">
-          <label class="control-label" for="inputCompany2">Company</label>
-          <div class="controls">
-              <input type="text" id="inputCompany2" name="inputCompany2" value="<?php if
-              (isset ($_POST['inputCompany2'])) {echo $_POST['inputCompany2']; }; ?>" required />
-          </div>
-      </div>
+    <h4>Technical implementation</h4>
+    <!-- Multiple Radios (inline) -->
+    <div class="row sub-info">
+        <div class="span5"><p>Are you doing the implementation by yourself?</p></div>
+        <div class="span7">
+            <label class="radio inline" for="radio-drop-1">
+                <input type="radio" name="radio-drop" id="radio-drop-1" value="1" autocomplete="off" checked="checked">
+                No
+            </label>
+            <label class="radio inline" for="radio-drop-2">
+                <input type="radio" name="radio-drop" id="radio-drop-2" value="2" autocomplete="off">
+                Yes
+            </label>
+        </div>
     </div>
-      <div class="row-fluid">
+    <div class="form-drop">
+        <div class="row-fluid">
+          <div class="control-group span6">
+              <label class="control-label" for="inputCompany2">Company</label>
+              <div class="controls">
+                  <input type="text" id="inputCompany2" name="inputCompany2" value="<?php if
+                  (isset ($_POST['inputCompany2'])) {echo $_POST['inputCompany2']; }; ?>" required />
+              </div>
+          </div>
+        </div>
+        <div class="row-fluid">
           <div class="control-group span6">
               <label class="control-label" for="inputFirstName2">First name</label>
               <div class="controls">
@@ -118,8 +131,8 @@
                   (isset ($_POST['inputLastName2'])) {echo $_POST['inputLastName2']; }; ?>" required />
               </div>
           </div>
-      </div>
-      <div class="row-fluid">
+        </div>
+        <div class="row-fluid">
           <div class="control-group span6">
               <label class="control-label" for="inputEmail2">E-Mail</label>
               <div class="controls">
@@ -134,6 +147,6 @@
                   (isset ($_POST['inputPhone2'])) {echo $_POST['inputPhone2']; }; ?>" required />
               </div>
           </div>
-      </div>
-  </div>
+        </div>
+    </div>
 </fieldset>

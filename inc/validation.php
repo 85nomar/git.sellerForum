@@ -63,42 +63,46 @@ if (isset($_POST["submit"]))  {
         //chosen option
         $theme = "I need access to the API for my own ricardo.ch account";
         $added_title = "Technical impplementation";
+        $radio_drop = $_POST["radio-drop"];
+        $email_added = '';
 
         //ADDITIONAL DATA
-        $company_name2 = $_POST["inputCompany2"];
-        $first_name2 = $_POST["inputFirstName2"];
-        $last_name2 = $_POST["inputLastName2"];
+        if($radio_drop == "1") {
 
-        $phone2 = $_POST["inputPhone2"];
-        $email_address2 = $_POST["inputEmail2"];
+            $company_name2 = $_POST["inputCompany2"];
+            $first_name2 = $_POST["inputFirstName2"];
+            $last_name2 = $_POST["inputLastName2"];
 
-        //validate
-        if (empty($company_name2)) {
-            $error_msg[] = "Company name cannot be empty";
-        }
-        if (empty($first_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $first_name2)) {
-            $error_msg[] = "The first name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
-            )";
-        }
-        if (empty($last_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $last_name2)) {
-            $error_msg[] = "The last name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
-            )";
-        }
+            $phone2 = $_POST["inputPhone2"];
+            $email_address2 = $_POST["inputEmail2"];
 
-        if (empty($email_address2) || !filter_var($email_address2, FILTER_VALIDATE_EMAIL)) {
-            $error_msg[] = "E-Mail must have a valid format, such as name@mailhost.com";
-        }
-        if (empty($phone2) || !is_numeric($phone2)) {
-            $error_msg[] = "Enter valid phone number";
-        }
+            //validate
+            if (empty($company_name2)) {
+                $error_msg[] = "Company name cannot be empty";
+            }
+            if (empty($first_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $first_name2)) {
+                $error_msg[] = "The first name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
+                )";
+            }
+            if (empty($last_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $last_name2)) {
+                $error_msg[] = "The last name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
+                )";
+            }
 
-        $email_added =
-            "Addition: $added_title \n\n" .
-            "Company name: $company_name2 \n" .
-            "Name: $first_name2 $last_name2\n" .
-            "E-Mail: $email_address2\n" .
-            "Phone: $phone2\n";
+            if (empty($email_address2) || !filter_var($email_address2, FILTER_VALIDATE_EMAIL)) {
+                $error_msg[] = "E-Mail must have a valid format, such as name@mailhost.com";
+            }
+            if (empty($phone2) || !is_numeric($phone2)) {
+                $error_msg[] = "Enter valid phone number";
+            }
 
+            $email_added =
+                "Addition: $added_title \n\n" .
+                "Company name: $company_name2 \n" .
+                "Name: $first_name2 $last_name2\n" .
+                "E-Mail: $email_address2\n" .
+                "Phone: $phone2\n";
+        }
 
     }
     // REQUEST FORM 2

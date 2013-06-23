@@ -29,7 +29,7 @@ $Layout->start(); ?>
   <div class="content-bottom container">
     <div class="row-fluid">
       <div class="span4">
-        <h3>ricardo.ch announces new API</h3>
+        <h3>Announcing our new API</h3>
         <div class="row-fluid">
             <div class="posted-date date-box span2">
                 <span class="month">Jun</span>
