@@ -3,6 +3,9 @@
      //change forum link back to .php
      $('.nav>li a[href="forum/index.html"]').attr('href', 'forum/index.php');
 
+     //change html to htm --> french biatches!!
+     $('.nav>li a[href="https://ws.ricardo.ch/ricardoApiSecurity/documentation/index.html"]').attr('href', 'https://ws.ricardo.ch/ricardoApiSecurity/documentation/index.htm');
+
     //colorize body
     if ($('#wrap .content-bottom:first').length > 0) {
         $('body').css('background-color', '#f2f2f2');
