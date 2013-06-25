@@ -522,7 +522,8 @@
                         <a href=".php" data-toggle="dropdown" class="dropdown-toggle"> Documentation</a>
                         <ul class="dropdown-menu">
                             <li><a href="../api-services.html">ricardo API Services</a></li>
-                            <li><a href="https://ws.ricardo.ch/ricardoApiSecurity/documentation/" target="_blank">Technical Documentation</a></li>
+                            <li><a href="https://ws.ricardo.ch/ricardoApi/documentation/technical/index.html" target="_blank">Technical Documentation</a></li>
+                            <li><a href="https://ws.ricardo.ch/ricardoApiSecurity/documentation/" target="_blank">Security Documentation</a></li>
                             <li><a href="../api-howto.html">How to</a></li>
                         </ul>
                     </li>

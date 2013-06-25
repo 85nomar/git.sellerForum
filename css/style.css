@@ -428,6 +428,14 @@ pre.prettyprint {
   font-weight:bold;
 }
 
+a:hover pre.prettyprint {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    box-shadow:0 0 5px #005580;
+}
 
 /*==================================================
   Q2A FORUM

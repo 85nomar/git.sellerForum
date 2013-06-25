@@ -12,8 +12,8 @@
 				'url' => '',
                 'children' => array(
                 	'ricardo API Services' => 'api-services',
-                	'Technical Documentation' => 'https://ws.ricardo.ch/ricardoApiSecurity/documentation/index',
-                	//'Security Documentation' => 'api-security',
+                    'Technical Documentation' => 'https://ws.ricardo.ch/ricardoApi/documentation/technical/index',
+                	'Security Documentation' => 'https://ws.ricardo.ch/ricardoApiSecurity/documentation/index',
                 	'How to' => 'api-howto',
                 	)
 			),
