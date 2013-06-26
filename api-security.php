@@ -65,6 +65,19 @@ Ricardo-Password: Password</pre>
                             <li><strong>SessionDuration</strong> after this duration of unactivity, the Consumer Token will need to be refreshed.</li>
                         </ul>
                     </div>
+                    <h4>Refresh the Token</h4>
+                    <p>When using the Consumer Token, if you retrieve a MessageSecurityException with a FaultException message “Invalid username!” it means that the Session for this Token has expired. You can refresh it using the method:</p>
+                    <div class="sectioned">
+                        <a href="https://ws.ricardo.ch/ricardoApiSecurity/documentation/technical/html/M_Ricardo_Api_Security_Contracts_IPartnershipService_RefreshTokenCredential.htm" target="_blank"><pre class="prettyprint">RefreshTokenCredential</pre></a>
+                        <p>And give the Consumer Token key.</p>
+                        <p>If the Consumer Token ExpirationDate has been reached, you will get a BusinessFault message “Invalid ToenCredential”. In this case, you will need to ask for a new temp credential and do the whole Consumer Token process.</p>
+                    </div>
+                    <h4>Antiforgery Tokens</h4>
+                    <p>Some critical methods are protected by an antiforgery token. It prevents a man-in-the-middle to replay the calls and impact fraudulently the platform.</p>
+                    <p>To obtain an Antiforgery Token, you have to call the method:</p>
+                    <div class="sectioned">
+                        <a href="https://ws.ricardo.ch/ricardoApiSecurity/documentation/technical/html/M_Ricardo_Api_Security_Contracts_IPartnershipService_CreateAntiforgeryToken.htm" target="_blank"><pre class="prettyprint">CreateAntiforgeryToken</pre></a>
+                    </div>
                 </div>
             </div>
 
