@@ -1,6 +1,6 @@
 <?php
 
-$to = "nobel.martinez@ricardo.com"; // email address to which the form data will be sent
+$to = "elmedin.medija@ricardo.ch"; // email address to which the form data will be sent
 $from = "support@ricardo.ch";
 $subject = "New API request"; // subject of the email that is sent
 
