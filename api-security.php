@@ -18,13 +18,13 @@ $Layout->start(); ?>
 
                     <h4>SOAP Bindings</h4>
                     <p>To authenticate a SOAP request, you have to give your credentials as following:</p>
-					<pre class="prettyprint">ChannelFactory<ISimpleService> factory = new ChannelFactory<ISimpleService>(endpointConfigurationName);
+                    <pre class="prettyprint">ChannelFactory<ISimpleService> factory = new ChannelFactory<ISimpleService>(endpointConfigurationName);
 factory.Credentials.UserName.UserName = "UserName";
 factory.Credentials.UserName.Password = "Password";</pre>
 
                     <h4>JSON Bindings</h4>
                     <p>To authenticate a JSON request, you have to give your credentials into HTTP Headers:</p>
-					<pre class="prettyprint">Ricardo-Username: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX
+                    <pre class="prettyprint">Ricardo-Username: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX
 Ricardo-Password: Password</pre>
 
                 </div>
