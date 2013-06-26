@@ -1,6 +1,7 @@
 <?php
 
-$my_email = "elmedin.medija@ricardo.ch"; // email address to which the form data will be sent
+$to = "nobel.martinez@ricardo.com"; // email address to which the form data will be sent
+$from = "support@ricardo.ch";
 $subject = "New API request"; // subject of the email that is sent
 
 /*
@@ -281,12 +282,13 @@ if (isset($_POST["submit"]))  {
         "Legal entity: $company_entity \n" .
         "Number of employees: $employees \n\n";
 
+    if  (!$error_msg) {
+
+        ini_set("sendmail_from", $from);
+        $headers = "From: $from";
         $email_messages = $email_body.$email_added;
 
-    if  (!$error_msg) {
-        // send the email
-        mail ($my_email, $subject, $email_messages);
-
+        mail($to, $subject, $email_messages);
 
         echo '
 
