@@ -3,9 +3,6 @@
      //change forum link back to .php
      $('.nav>li a[href="forum/index.html"]').attr('href', 'forum/index.php');
 
-     //change html to htm --> french biatches!!
-     $('.nav>li a[href="https://ws.ricardo.ch/ricardoApiSecurity/documentation/index.html"]').attr('href', 'https://ws.ricardo.ch/ricardoApiSecurity/documentation/index.htm');
-
     //colorize body
     if ($('#wrap .content-bottom:first').length > 0) {
         $('body').css('background-color', '#f2f2f2');
@@ -17,7 +14,20 @@
 
     /*form*/
 
-     //get the choosed form
+     //add or remove www. on focus
+     $('input[name="inputUrl"], input[name="inputUrl2"]').on('focus', function(){
+         var $this = $(this);
+         if($this.val() == ''){
+             $this.val('www.');
+         }
+     }).on('blur', function(){
+             var $this = $(this);
+             if($this.val() == 'www.'){
+                 $this.val('');
+             }
+         });
+
+     //get the chosen form
      $(".radioToggle").on('click', function(){
          var toggleVal = $('input[name=toggler]:checked').val();
 
@@ -27,6 +37,39 @@
             window.location.href = 'request'+toggleVal+'.php';
          }
      });
+
+     /* NAVIGATION*/
+
+    //Documentation Advice
+    var DocLink = $('.nav>li>a:contains("Documentation")');
+
+
+     //set Cookie
+    if ($.cookie('notShowAdvice') == undefined) {
+        DocLink.addClass('overlayInfo');
+    };
+    DocLink.on('click', function() {
+        var adviceText = "<h1>Advice</h1><p>You won't be able to see the <strong>technical documentations</strong> if you don't have access to our API.</p><p>Please be sure you got our access. Otherwise make a request.</p>"
+        var adviceButtons = "<div class='advice-btn pull-right'><a href='#' id='ok' class='btn'>OK</a><a href='request.html' class='btn btn-primary'>request</a></div>"
+
+        if($(this).hasClass('overlayInfo') === true) {
+            $('#wrap').prepend('<div id="advice"><div id="BGdark"><div></div></div><div class="advice-message"><div class="container"><div class="row-fluid">'+adviceText + adviceButtons+'</div></div></div></div>');
+            $(this).removeClass('overlayInfo');
+
+            $(".advice-message").stop(true).animate({
+                top: '25%'
+            }, 300);
+
+            $('#ok').on('click', function(){
+                $('#advice').fadeOut('fast', function() {
+                    $(this).remove();
+                });
+                $.cookie('notShowAdvice', true, { expires: 1 });
+            });
+        }
+    });
+
+
 
      //Request form: Keep request link as active
      if ($(location).attr('href').indexOf('request') != -1) {

@@ -36,6 +36,7 @@
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/prettify/prettify.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.cookie.js"></script>
 
     <script type="text/javascript" src="js/scroll-top.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>

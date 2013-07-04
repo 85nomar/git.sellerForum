@@ -44,7 +44,7 @@
         <div class="control-group span6">
             <label class="control-label" for="inputUrl">website URL</label>
             <div class="controls">
-                <input type="text" id="inputUrl" name="inputUrl"  placeholder="e.g. www.example.com"value="<?php if
+                <input type="text" id="inputUrl" name="inputUrl"  placeholder="www.example.com"value="<?php if
                 (isset ($_POST['inputUrl'])) {echo $_POST['inputUrl']; }; ?>" required />
             </div>
         </div>
@@ -84,6 +84,21 @@
       </div>
     </div>
 
+    <div class="row sub-info">To grant you access, we need to know who to communicate with you</div>
+    <div class="row-fluid">
+      <div class="control-group span6">
+          <label class="control-label" for="inputIP">static IP (range)</label>
+          <div class="controls">
+              <textarea  id="inputIP" name="inputIP" rows="3" required><?php if(isset ($_POST['inputIP'])) {echo $_POST['inputIP']; }; ?></textarea>
+          </div>
+      </div>
+      <div class="control-group span6">
+          <label class="control-label" for="inputTech">OS, technology, language</label>
+          <div class="controls">
+              <textarea  id="inputTech" name="inputTech" rows="3" required><?php if(isset ($_POST['inputTech'])) {echo $_POST['inputTech']; }; ?></textarea>
+          </div>
+      </div>
+    </div>
 
   </div>
 </fieldset>

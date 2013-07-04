@@ -83,6 +83,7 @@
                 </div>
             </div>
         </div>
+
         <div class="row-fluid">
             <!-- Textarea -->
             <div class="control-group">
@@ -90,6 +91,21 @@
                 <div class="controls">
                     <textarea name="inputComment2" class="area span11" placeholder="you are allowed to write in French or German"  wrap="physical"><?php if
                         (isset($_POST['inputComment2'])) {echo $_POST['inputComment2']; }; ?></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row sub-info">To grant you access, we need to know who to communicate with you</div>
+        <div class="row-fluid">
+            <div class="control-group span6">
+                <label class="control-label" for="inputIP">static IP (range)</label>
+                <div class="controls">
+                    <textarea  id="inputIP" name="inputIP" rows="3" required><?php if(isset ($_POST['inputIP'])) {echo $_POST['inputIP']; }; ?></textarea>
+                </div>
+            </div>
+            <div class="control-group span6">
+                <label class="control-label" for="inputTech">OS, technology, language</label>
+                <div class="controls">
+                    <textarea  id="inputTech" name="inputTech" rows="3" required><?php if(isset ($_POST['inputTech'])) {echo $_POST['inputTech']; }; ?></textarea>
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 <?php
 
-$to = "elmedin.medija@ricardo.ch"; // email address to which the form data will be sent
+//$to = "elmedin.medija@ricardo.ch"; // email address to which the form data will be sent
+$to = "nobel.martinez@ricardo.ch"; // email address to which the form data will be sent
 $from = "support@ricardo.ch";
 $subject = "New API request"; // subject of the email that is sent
 
@@ -52,6 +53,8 @@ if (isset($_POST["submit"]))  {
     $company_entity = $_POST["inputEntity"];
     $employees = $_POST["inputEmployees"];
 
+    $company_ip = $_POST["inputIP"];
+    $company_tech = $_POST["inputTech"];
 
     /* ADDITIONAL FIELDS ACCORDING TO CHOSEN FORM*/
     $radio_toggler = $_POST["toggler"];
@@ -97,12 +100,22 @@ if (isset($_POST["submit"]))  {
                 $error_msg[] = "Enter valid phone number";
             }
 
+            if (empty($company_ip) || !is_numeric($company_ip)) {
+                $error_msg[] = "We need your static IP (range) to allow you access to our environment";
+            }
+            if (empty($company_tech)) {
+                $error_msg[] = "What OS, technology, language will be used to communicate with the API?";
+            }
+
             $email_added =
                 "Addition: $added_title \n\n" .
                 "Company name: $company_name2 \n" .
                 "Name: $first_name2 $last_name2\n" .
                 "E-Mail: $email_address2\n" .
-                "Phone: $phone2\n";
+                "Phone: $phone2\n\n" .
+                "Static IP: $company_ip\n" .
+                "Technology: $company_tech\n\n";
+
         }
 
     }
