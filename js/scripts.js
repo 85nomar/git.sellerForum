@@ -41,29 +41,36 @@
      /* NAVIGATION*/
 
     //Documentation Advice
-    var DocLink = $('.nav>li>a:contains("Documentation")');
+    var DocLink = $('.nav>li>ul>li>a:contains(" 2.1")');
 
 
-     //set Cookie
-    if ($.cookie('notShowAdvice') == undefined) {
+     if ($.cookie('notShowAdvice') == undefined) {
         DocLink.addClass('overlayInfo');
-    };
-    DocLink.on('click', function() {
-        var adviceText = "<h1>Advice</h1><p>You won't be able to see the <strong>technical documentations</strong> if you don't have access to our API.</p><p>Please be sure you got our access. Otherwise make a request.</p>"
-        var adviceButtons = "<div class='advice-btn pull-right'><a href='#' id='ok' class='btn'>OK</a><a href='request.html' class='btn btn-primary'>request</a></div>"
+        DocLink.on('click', function(event){
+            event.preventDefault();
+        });
+     }else{
+        DocLink.removeClass('overlayInfo').attr('href', 'http://ticket:8080/display/CORE/API+Documentation');
+     }
+
+    DocLink.on('click', function(event) {
+
+        var adviceText = "<h1>Advice</h1><p>If you don't have access to our API you won't be able to see the documentations for <strong>Version 2.1</strong> yet.</p><p>Please make sure you got our access. Otherwise make a <a href='request.html'>request</a>.</p>"
+        var adviceButtons = "<div class='advice-btn pull-right'><a href='http://ticket:8080/display/CORE/API+Documentation' id='ok' class='btn'>OK</a><a href='#' id='cancel' class='btn btn-danger'>Cancel</a></div>"
 
         if($(this).hasClass('overlayInfo') === true) {
             $('#wrap').prepend('<div id="advice"><div id="BGdark"><div></div></div><div class="advice-message"><div class="container"><div class="row-fluid">'+adviceText + adviceButtons+'</div></div></div></div>');
-            $(this).removeClass('overlayInfo');
 
             $(".advice-message").stop(true).animate({
                 top: '25%'
             }, 300);
 
-            $('#ok').on('click', function(){
+            $('#cancel').on('click', function(){
                 $('#advice').fadeOut('fast', function() {
                     $(this).remove();
                 });
+            });
+            $('#ok').on('click', function(){
                 $.cookie('notShowAdvice', true, { expires: 1 });
             });
         }
@@ -73,7 +80,7 @@
 
      //Request form: Keep request link as active
      if ($(location).attr('href').indexOf('request') != -1) {
-         $('.nav>li a[href="request.php"]').addClass('active');
+         $('.nav>li a[href="request.html"]').addClass('active');
      }
 
      //radio choice form1: (hide as default)
