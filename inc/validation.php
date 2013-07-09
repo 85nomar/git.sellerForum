@@ -21,7 +21,6 @@ $subject = "New API request"; // subject of the email that is sent
     $xml = verifyUser($_POST['username'], $_POST['password']);
     
     if($xml != false){
-        
         //CONTENT HERE IF TRUE
         echo 'content true!';
     }
@@ -286,9 +285,9 @@ if (isset($_POST["submit"]))  {
         "Technology: $company_tech\n\n";
 
 
-    echo $email_body;
-    echo $email_added;
-    exit();
+   // echo $email_body;
+   // echo $email_added;
+   // exit();
 
     if  (!$error_msg) {
 
@@ -299,7 +298,6 @@ if (isset($_POST["submit"]))  {
         mail($to, $subject, $email_messages);
 
         echo '
-
         <div class="alert alert-success alert-block">
           <h3>Thank you!</h3>
             <p>We will get back to you as soon as possible!</p>
