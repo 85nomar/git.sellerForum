@@ -84,11 +84,11 @@ if (isset($_POST["submit"]))  {
             if (empty($company_name2)) {
                 $error_msg[] = "Company name cannot be empty";
             }
-            if (empty($first_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $first_name2)) {
+            if (empty($first_name2) || !preg_match("~^[a-zA-Z-äöüÄÖÜéàèÉÈ\-'\s]{1,60}$~i", $first_name2)) {
                 $error_msg[] = "The first name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
                 )";
             }
-            if (empty($last_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $last_name2)) {
+            if (empty($last_name2) || !preg_match("~^[a-zA-Z-äöüÄÖÜéàèÉÈ\-'\s]{1,60}$~i", $last_name2)) {
                 $error_msg[] = "The last name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
                 )";
             }
@@ -100,21 +100,12 @@ if (isset($_POST["submit"]))  {
                 $error_msg[] = "Enter valid phone number";
             }
 
-            if (empty($company_ip) || !is_numeric($company_ip)) {
-                $error_msg[] = "We need your static IP (range) to allow you access to our environment";
-            }
-            if (empty($company_tech)) {
-                $error_msg[] = "What OS, technology, language will be used to communicate with the API?";
-            }
-
             $email_added =
                 "Addition: $added_title \n\n" .
                 "Company name: $company_name2 \n" .
                 "Name: $first_name2 $last_name2\n" .
                 "E-Mail: $email_address2\n" .
-                "Phone: $phone2\n\n" .
-                "Static IP: $company_ip\n" .
-                "Technology: $company_tech\n\n";
+                "Phone: $phone2\n\n";
 
         }
 
@@ -128,7 +119,7 @@ if (isset($_POST["submit"]))  {
 
         $message2 = $_POST["inputComment2"];
 
-        if (empty($message2) || !preg_match("/^[0-9A-Za-z\/-\s'\(\)!\?\.,]+$/", $message2) || (strlen($message2) >
+        if (empty($message2) || !preg_match("/^[0-9a-zA-Z-äöüÄÖÜéàèÉÈ\/-\s'\(\)!\?\.,]+$/", $message2) || (strlen($message2) >
                 $limit)) {
             $error_msg[] = "The Comments field must contain only letters, digits, spaces and basic punctuation (&nbsp;'&nbsp;-&nbsp;,&nbsp;.&nbsp;), and has a limit of 500 characters";
         }
@@ -162,7 +153,7 @@ if (isset($_POST["submit"]))  {
         $employees2 = $_POST["inputEmployees2"];
 
 
-        if (empty($message2) || !preg_match("/^[0-9A-Za-z\/-\s'\(\)!\?\.,]+$/", $message2) || (strlen($message2) >
+        if (empty($message2) || !preg_match("/^[0-9a-zA-Z-äöüÄÖÜéàèÉÈ\/-\s'\(\)!\?\.,]+$/", $message2) || (strlen($message2) >
                 $limit)) {
             $error_msg[] = "Company description field must contain only letters, digits,
             spaces and basic punctuation (&nbsp;'&nbsp;-&nbsp;,&nbsp;.&nbsp;), and has a limit of 500 characters";
@@ -171,11 +162,11 @@ if (isset($_POST["submit"]))  {
         if (empty($user_name2)) {
             $error_msg[] = "your client's ricardo.ch username cannot be empty";
         }
-        if (empty($first_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $first_name2)) {
+        if (empty($first_name2) || !preg_match("~^[a-zA-Z-äöüÄÖÜéàèÉÈ\-'\s]{1,60}$~i", $first_name2)) {
             $error_msg[] = "your client's first name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
             )";
         }
-        if (empty($last_name2) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $last_name2)) {
+        if (empty($last_name2) || !preg_match("~^[a-zA-Z-äöüÄÖÜéàèÉÈ\-'\s]{1,60}$~i", $last_name2)) {
             $error_msg[] = "your client's last name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
             )";
         }
@@ -218,23 +209,21 @@ if (isset($_POST["submit"]))  {
     }
 
 
-
-
     // check
 
-    if (empty($message) || !preg_match("/^[0-9A-Za-z\/-\s'\(\)!\?\.,]+$/", $message) || (strlen($message) >
+    if (empty($message) || !preg_match("/^[0-9a-zA-Z-äöüÄÖÜéàèÉÈ\/-\s'\(\)!\?\.,]+$/", $message) || (strlen($message) >
             $limit)) {
-        $error_msg[] = "The Comments field must contain only letters, digits, spaces and basic punctuation (&nbsp;'&nbsp;-&nbsp;,&nbsp;.&nbsp;), and has a limit of 500 characters";
+        $error_msg[] = "Your comments must contain only letters, digits, spaces and basic punctuation (&nbsp;'&nbsp;-&nbsp;,&nbsp;.&nbsp;), and has a limit of 500 characters";
     }
 
     if (empty($user_name)) {
         $error_msg[] = "username cannot be empty";
     }
-    if (empty($first_name) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $first_name)) {
+    if (empty($first_name) || !preg_match("~^[a-zA-Z-äöüÄÖÜéàèÉÈ\-'\s]{1,60}$~i", $first_name)) {
         $error_msg[] = "The first name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
             )";
     }
-    if (empty($last_name) || !preg_match("~^[a-z\-'\s]{1,60}$~i", $last_name)) {
+    if (empty($last_name) || !preg_match("~^[a-zA-Z-äöüÄÖÜéàèÉÈ\-'\s]{1,60}$~i", $last_name)) {
         $error_msg[] = "The last name field must contain only letters, spaces, dashes ( - ) and single quotes ( '
             )";
     }
@@ -251,7 +240,6 @@ if (isset($_POST["submit"]))  {
         $error_msg[] = "Companie's URL is invalid";
     }
 
-
     if (empty($company_entity)) {
         $error_msg[] = "Legal entity cannot be empty";
     }
@@ -259,16 +247,26 @@ if (isset($_POST["submit"]))  {
         $error_msg[] = "Number of employees is invalid";
     }
 
-
     if (empty($email_address) || !filter_var($email_address, FILTER_VALIDATE_EMAIL)) {
         $error_msg[] = "Your email must have a valid format, such as name@mailhost.com";
     }
 
-
-
     if (empty($phone) || !is_numeric($phone)) {
         $error_msg[] = "Enter valid phone number";
     }
+
+    if (empty($company_tech)) {
+        $error_msg[] = "What OS, technology and language will be used to communicate with the API?";
+    }
+
+    /*if (empty($company_ip) || !is_numeric($company_ip)) {
+        $error_msg[] = "We need a valid static IP range";
+    }*/
+    if (empty($company_ip) || !preg_match("/^[0-9\.-\s]+$/", $company_ip)) {
+        $error_msg[] = "We need a valid static IP range";
+    }
+
+
 
     if ($error_msg) {
         echo '<div class="alert"><ul>';
@@ -293,7 +291,12 @@ if (isset($_POST["submit"]))  {
         "Company name: $company_name \n" .
         "URL: $company_url \n" .
         "Legal entity: $company_entity \n" .
-        "Number of employees: $employees \n\n";
+        "Number of employees: $employees \n\n" .
+
+        "IT INFORMATIONS:\n\n" .
+        "Static IP: $company_ip\n" .
+        "Technology: $company_tech\n\n";
+
 
     if  (!$error_msg) {
 
@@ -303,8 +306,8 @@ if (isset($_POST["submit"]))  {
 
         mail($to, $subject, $email_messages);
 
-        echo '
 
+        echo '
         <div class="alert alert-success alert-block">
           <h3>Thank you!</h3>
             <p>We will get back to you as soon as possible!</p>
