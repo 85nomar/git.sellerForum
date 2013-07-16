@@ -14,7 +14,7 @@ $Layout->start(); ?>
 			<div class="span12">
 				<div class="boxed">
 					<h4>Login</h4>
-					<p>For external applications, please refer to the “How to obtain a Consumer Token?” section of Ricardo <a href="https://ws.betaqxl.com/ricardoApiSecurity/documentation/">API Security.</a></p>
+					<p>For external applications, please refer to the “How to obtain a Token?” section of <a href="https://ws.betaqxl.com/ricardoApiSecurity/documentation/">Authentication</a>.</p>
 
 					<p>For Ricardo Group internal applications, use the method <a href="https://ws.betaqxl.com/ricardoApi/documentation/technical/html/M_Ricardo_Api_Contracts_ILoginService_Login.htm">LoginService.Login</a> to retrieve a Consumer Token.</p>
 				</div>
