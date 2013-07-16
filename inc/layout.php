@@ -15,6 +15,7 @@
                     'Technical Documentation' => 'https://ws.ricardo.ch/ricardoApi/documentation/technical/index',
                 	'Security Documentation' => 'api-security',
                 	'How to' => 'api-howto',
+                    'Documentation 2.1' => '',
                 	)
 			),
 			'Forum' => array(
