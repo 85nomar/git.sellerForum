@@ -683,6 +683,7 @@
 		
 		$qa_content['script_rel']=array('../../assets/js/jquery.min.js');
 		$qa_content['script_rel'][]='qa-content/qa-page.js?'.QA_VERSION;
+        $qa_content['script_rel'][]='../../assets/js/jquery.cookie.js';
         $qa_content['script_rel'][]='../../js/scroll-top.js?';
         $qa_content['script_rel'][]='../../js/scripts.js?';
 

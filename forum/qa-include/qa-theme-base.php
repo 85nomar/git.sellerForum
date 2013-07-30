@@ -301,13 +301,23 @@
 		function bs_footer()
 		{
 		
-		$this->output('        <div id="push"></div>
+		$this->output('<div id="push"></div>
                        </div><!-- END WRAPPER -->
                        <footer id="footer" class="footer">
                           <div class="container">
                             <p class="credit">Copyright © 1999-2013 by  <a href="">ricardo.ch</a> · All rights reserved </p>
                           </div>
 						</footer>');
+        $this->output("<!-- GA -->
+                    <script>
+                        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                        ga('create', 'UA-42221981-1', 'ricardo.ch');
+                        ga('send', 'pageview');
+                    </script>");
 		
 		}
 		
@@ -519,12 +529,13 @@
                         <a href="../index.php"> Home</a>
                     </li>
                     <li class="dropdown">
-                        <a href=".php" data-toggle="dropdown" class="dropdown-toggle"> Documentation</a>
+                        <a href=".html" data-toggle="dropdown" class="dropdown-toggle"> Documentation</a>
                         <ul class="dropdown-menu">
                             <li><a href="../api-services.html">ricardo API Services</a></li>
-                            <li><a href="https://ws.ricardo.ch/ricardoApi/documentation/technical/index.html" target="_blank">Technical Documentation</a></li>
-                            <li><a href="../api-security.html" target="_blank">Security Documentation</a></li>
+                            <li><a href="https://ws.ricardo.ch/ricardoApi/documentation/technical/index.html">Technical Documentation</a></li>
+                            <li><a href="../api-security.html">Security Documentation</a></li>
                             <li><a href="../api-howto.html">How to</a></li>
+                            <li><a href=".html" class="overlayInfo">Documentation 2.1</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">

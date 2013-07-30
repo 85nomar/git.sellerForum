@@ -1,4 +1,4 @@
-@font-face {
+3r@font-face {
   font-family: 'MetaOT';
   src: url('../assets/fonts/MetaOT-Bold_0.eot');
   src: url('../assets/fonts/MetaOT-Bold_0.eot?#iefix') format('embedded-opentype'),
@@ -50,7 +50,7 @@ h1, h2, h3, h4 {
   font-weight: normal;
 }
 h1 {
-  margin-top:30px;
+  margin-top:40px;
 }
 h4 {
   text-shadow:0 1px 0 rgba(255,255,255,1);
