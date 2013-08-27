@@ -11,11 +11,12 @@
 			'Documentation' => array(
 				'url' => '',
                 'children' => array(
-                	'ricardo API Services' => 'api-services',
-                    'Technical Documentation' => 'https://ws.ricardo.ch/ricardoApi/documentation/technical/index',
-                	'Security Documentation' => 'api-security',
+                	'Services' => 'api-services',
+                    'Authentication' => 'api-authentication',
+                    'Technical' => 'https://ws.ricardo.ch/ricardoApi/documentation/technical/index',
+                	'Errors Handling' => 'api-errors_handling',
                 	'How to' => 'api-howto',
-                    'Documentation 2.1' => '',
+                    'FAQ' => 'api-faq'
                 	)
 			),
 			'Forum' => array(

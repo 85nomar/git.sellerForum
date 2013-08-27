@@ -351,7 +351,7 @@ a.active {background:#ddd;}
 .navbar .nav>li>a.active {
   border-radius:4px;
   color: #fff;
-  background-color:#F79623;
+  background-color:#21a9e3;
   text-shadow:none;
 }
 .dropdown-menu>li>a {
@@ -430,7 +430,9 @@ fieldset h4 {
 }
 
 
-
+.accordion-group {
+    background-color:#f2f2f2;
+}
 
 /*==================================================
   FONT AWESOME

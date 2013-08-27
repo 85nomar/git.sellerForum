@@ -529,13 +529,14 @@
                         <a href="../index.php"> Home</a>
                     </li>
                     <li class="dropdown">
-                        <a href=".html" data-toggle="dropdown" class="dropdown-toggle"> Documentation</a>
+                        <a class="active" href=".html" data-toggle="dropdown"> Documentation</a>
                         <ul class="dropdown-menu">
-                            <li><a href="../api-services.html">ricardo API Services</a></li>
-                            <li><a href="https://ws.ricardo.ch/ricardoApi/documentation/technical/index.html">Technical Documentation</a></li>
-                            <li><a href="../api-security.html">Security Documentation</a></li>
-                            <li><a href="../api-howto.html">How to</a></li>
-                            <li><a href=".html" class="overlayInfo">Documentation 2.1</a></li>
+                            <li><a href="../api-services.php">Services</a></li>
+                            <li><a href="../api-authentication.php">Authentication</a></li>
+                            <li><a href="https://ws.ricardo.ch/ricardoApi/documentation/technical/index.html">Technical</a></li>
+                            <li><a href="../api-errors_handling.php">Errors Handling</a></li>
+                            <li><a href="../api-howto.php">How to</a></li>
+                            <li><a href="../api-faq.php">FAQ</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">

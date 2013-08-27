@@ -41,7 +41,7 @@
      /* NAVIGATION*/
 
     //Documentation Advice
-    var DocLink = $('.nav>li>ul>li>a:contains(" 2.1")');
+    var DocLink = $('.table td > a');
 
 
      if ($.cookie('notShowAdvice') == undefined) {
@@ -50,7 +50,7 @@
             event.preventDefault();
         });
      }else{
-        DocLink.removeClass('overlayInfo').attr('href', 'http://ticket:8080/display/CORE/API+Documentation');
+        DocLink.removeClass('overlayInfo'); //.attr('href', 'http://ticket:8080/display/CORE/API+Documentation');
      }
 
     DocLink.on('click', function(event) {
