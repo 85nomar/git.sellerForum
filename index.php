@@ -14,7 +14,7 @@ $Layout->start(); ?>
             <div class="visual-text">
               <h1>GET API ACCESS</h1>
               <p>Make a step forward and get your API access. Increase your sales revenue and reduce the administration cost<p>
-              <a class="btn btn-primary btn-large" href="request.html">Make a Request »</a></p>
+              <a class="btn btn-primary btn-large" href="request.html">Apply here »</a></p>
             </div>
             <div class="visual-img">
               <img src="img/visual-home.png" />
@@ -69,7 +69,7 @@ $Layout->start(); ?>
               </div>
               <div class="span9">
                   <p>We have changed the registration procedure to make it easier and more comfortable to get access to our API.</p>
-                  <p>You will find the new “<a href="request.html">request form</a>” directly on our website. Please provide us all the necessary information, so we can process your request as quickly as possible. It is important to submit us the request even though you already have access to the old API.</p>
+                  <p>You will find the new “<a href="request.html">application form</a>” directly on our website. Please provide us all the necessary information, so we can process your request as quickly as possible. It is important to submit us the request even though you already have access to the old API.</p>
                   <!-- <p><a class="btn-anchor" href="news.html"><i class="icon-angle-right"></i>View details</a></p> -->
               </div>
           </div>

@@ -1,7 +1,7 @@
 <?php require('inc/layout.php');
 
 
-$Layout->title = 'request';
+$Layout->title = 'API | Application';
 
 $Layout->start(); ?>
 
@@ -23,7 +23,7 @@ $Layout->start(); ?>
 <div id="content" class="container-fluid">
     <div class="container">
 
-        <h1>API Request</h1>
+        <h1>API Application</h1>
 
         <?php  require_once('inc/validation.php'); ?>
 

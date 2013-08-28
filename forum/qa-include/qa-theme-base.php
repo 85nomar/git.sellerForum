@@ -529,7 +529,7 @@
                         <a href="../index.php"> Home</a>
                     </li>
                     <li class="dropdown">
-                        <a class="active" href=".html" data-toggle="dropdown"> Documentation</a>
+                        <a href=".html" data-toggle="dropdown"> Documentation</a>
                         <ul class="dropdown-menu">
                             <li><a href="../api-services.php">Services</a></li>
                             <li><a href="../api-authentication.php">Authentication</a></li>
@@ -540,10 +540,10 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="active" href="index.php"> Forum</a>
+                        <a class="active" href="index.php">Forum</a>
                     </li>
                     <li class="dropdown">
-                        <a href="../request.php"> Request</a>
+                        <a href="../request.php">Application</a>
                     </li>
                 </ul>
             </div><!-- /.nav-collapse -->

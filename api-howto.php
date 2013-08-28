@@ -113,7 +113,7 @@ Body
                                     <div class="span6">
                                         <h4>SOAP example</h4>
                                         <pre class="prettyprint"><xmp>
-<?xml version="1.0" encoding="UTF-8"?>
+<xml version="1.0" encoding="UTF-8">
 <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ric="http://ricardo.contracts" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
     <soap:Header />
     <soap:Body>
@@ -419,7 +419,7 @@ Body
                                     <div class="span6">
                                         <h4>SOAP example</h4>
                                         <pre class="prettyprint"><xmp>
-<?xml version="1.0" encoding="UTF-8"?>
+<xml version="1.0" encoding="UTF-8">
 <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ric="http://ricardo.contracts">
     <soap:Header />
     <soap:Body>

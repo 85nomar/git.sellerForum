@@ -25,7 +25,7 @@
 			//'News' => array(
 			//	'url' => 'news'			),
 
-			'Request' => array(
+			'Application' => array(
 				'url' => 'request'
 			)
 		);

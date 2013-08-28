@@ -55,14 +55,14 @@
 
     DocLink.on('click', function(event) {
 
-        var adviceText = "<h1>Advice</h1><p>If you don't have access to our API you won't be able to see the documentations for <strong>Version 2.1</strong> yet.</p><p>Please make sure you got our access. Otherwise make a <a href='request.html'>request</a>.</p>"
+        var adviceText = "<h1>Advice</h1><p>If you don't have access to our API you won't be able to see the documentations for <strong>Version 2.1</strong> yet.</p><p>Please make sure you got our access. Otherwise <a href='request.html'>apply here</a>.</p>"
         var adviceButtons = "<div class='advice-btn pull-right'><a href='http://ticket:8080/display/CORE/API+Documentation' id='ok' class='btn'>OK</a><a href='#' id='cancel' class='btn btn-danger'>Cancel</a></div>"
 
         if($(this).hasClass('overlayInfo') === true) {
             $('#wrap').prepend('<div id="advice"><div id="BGdark"><div></div></div><div class="advice-message"><div class="container"><div class="row-fluid">'+adviceText + adviceButtons+'</div></div></div></div>');
 
             $(".advice-message").stop(true).animate({
-                top: '25%'
+                top: '27%'
             }, 300);
 
             $('#cancel').on('click', function(){
