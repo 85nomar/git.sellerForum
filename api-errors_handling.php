@@ -20,7 +20,7 @@ $Layout->start(); ?>
                 <p><strong>If you receive a businessFault, this object contains the following elements:</strong></p>
                 <ul>
                     <li>ErrorType : the exception name, for server-side use only.</li>
-                    <li>ErrorCodesType : references the Enum that contains the error(s) you generated. <a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/N_Ricardo_Enums.htm" rel="nofollow">Cf. here for details.</a></li>
+                    <li>ErrorCodesType : references the Enum that contains the error(s) you generated. <a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/N_Ricardo_Enums.htm" rel="nofollow">Cf. here for details.</a></li>
                     <li>ErrorCodes : the list of value describing the error(s). Refer to the appropriate Enum in the documentation above for more details.</li>
                 </ul>
             </div>

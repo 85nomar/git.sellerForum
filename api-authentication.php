@@ -22,11 +22,11 @@ $Layout->start(); ?>
                 <h2>Token Credentials</h2>
                 <ul>
                     <li>it represents at the same time a Ricardo customer (or an anonymous user) and a partnership.</li>
-                    <li>it is only composed of a <a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/P_Ricardo_Contracts_Models_Security_Result_TokenCredentialResult_TokenCredentialKey.htm" rel="nofollow">key</a> (there is no associated password).</li>
+                    <li>it is only composed of a <a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/P_Ricardo_Contracts_Models_Security_Result_TokenCredentialResult_TokenCredentialKey.htm" rel="nofollow">key</a> (there is no associated password).</li>
                     <li>there are two elements associated with it:&nbsp;<br>
                         <ul>
-                            <li>(short) <a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/P_Ricardo_Contracts_Models_Security_Result_TokenCredentialResult_SessionDuration.htm" rel="nofollow">SessionDuration</a>: it is the duration (in minutes) during which the token will be usable. Every time you use this token, the SessionDuration is reinitialized to its default value. If you try to use the token after the SessionDuration has expired, you'll receive an error message stating that your token has expired, and must be refreshed. You can do that by using the&nbsp;<a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/M_Ricardo_Contracts_ISecurityService_RefreshTokenCredential.htm" rel="nofollow">RefreshTokenCredential</a> method of the SecurityService</li>
-                            <li>(DateTime) <a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/P_Ricardo_Contracts_Models_Security_Result_TokenCredentialResult_TokenExpirationDate.htm" rel="nofollow">TokenExpirationDate</a>: it's the date after which the token will not be usable any more (and trying to Refresh it will also fail). To use the API again, you'll have to ask for a new token.</li>
+                            <li>(short) <a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/P_Ricardo_Contracts_Models_Security_Result_TokenCredentialResult_SessionDuration.htm" rel="nofollow">SessionDuration</a>: it is the duration (in minutes) during which the token will be usable. Every time you use this token, the SessionDuration is reinitialized to its default value. If you try to use the token after the SessionDuration has expired, you'll receive an error message stating that your token has expired, and must be refreshed. You can do that by using the&nbsp;<a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/M_Ricardo_Contracts_ISecurityService_RefreshTokenCredential.htm" rel="nofollow">RefreshTokenCredential</a> method of the SecurityService</li>
+                            <li>(DateTime) <a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/P_Ricardo_Contracts_Models_Security_Result_TokenCredentialResult_TokenExpirationDate.htm" rel="nofollow">TokenExpirationDate</a>: it's the date after which the token will not be usable any more (and trying to Refresh it will also fail). To use the API again, you'll have to ask for a new token.</li>
                         </ul>
                     </li>
                 </ul>
@@ -35,7 +35,7 @@ $Layout->start(); ?>
 
         <div>
             <h2>How to obtain a Token?</h2>
-            <p>All the methods you need are in the <a href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/T_Ricardo_Contracts_ISecurityService.htm" target="_blank">SecurityService</a> (<a class="external-link" href="https://ws.betaqxl.com/ricardoapi/SecurityService.Soap.svc" rel="nofollow">SOAP</a>,
+            <p>All the methods you need are in the <a href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/T_Ricardo_Contracts_ISecurityService.htm" target="_blank">SecurityService</a> (<a class="external-link" href="https://ws.betaqxl.com/ricardoapi/SecurityService.Soap.svc" rel="nofollow">SOAP</a>,
                 <a class="external-link" href="https://ws.betaqxl.com/ricardoapi/SecurityService.Json.svc" rel="nofollow">JSON</a>). You have to identify all your calls to this service with your Partnership
                 credentials:</p>
 
@@ -70,9 +70,9 @@ httpWebRequest.Headers.Add("Ricardo-Password: Password");
                                 Ask for an Anonymous token
                             </a>
                         </div>
-                        <div id="tokenAnonymous" class="accordion-body collapse in">
+                        <div id="tokenAnonymous" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/M_Ricardo_Contracts_ISecurityService_GetAnonymousTokenCredential.htm" rel="nofollow">GetAnonymousTokenCredential()</a>
+                                <a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/M_Ricardo_Contracts_ISecurityService_GetAnonymousTokenCredential.htm" rel="nofollow">GetAnonymousTokenCredential()</a>
                                 <p>That's all!</p>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ httpWebRequest.Headers.Add("Ricardo-Password: Password");
                         <div id="TokenCredential" class="accordion-body collapse">
                             <div class="accordion-inner">
                                 <p>First of all, you will have to ask for a Temp Credential, using the method:</p>
-                                <a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/M_Ricardo_Contracts_ISecurityService_CreateTemporaryCredential.htm" rel="nofollow">CreateTemporaryCredential()</a>
+                                <a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/M_Ricardo_Contracts_ISecurityService_CreateTemporaryCredential.htm" rel="nofollow">CreateTemporaryCredential()</a>
                                 <p>You will get a TempCredentialD to object that contains:</p>
                                 <ul>
                                     <li><strong>TemporaryCredentialKey</strong>: The Temp Credential key needed to obtain the Consumer Token</li><li><strong>ValidationUrl</strong>: The link to the authorization page</li>
@@ -142,10 +142,10 @@ httpWebRequest.Headers.Add("Ricardo-Password: Password");
                         </div>
                         <div id="tokenRefresh" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <p>When using the Consumer Token, if you retrieve a MessageSecurityException with a FaultException message “Invalid username!” it means that the Session for this Token has expired. You can refresh it using the method:</p>
+                                <p>When using the Consumer Token, if you retrieve a MessageSecurityException with a FaultException message “Session expired” it means that the Session for this Token has expired. You can refresh it using the method:</p>
                                 <a class="external-link" href="https://ws.betaqxl.com/ricardoApiSecurity/documentation/technical/html/M_Ricardo_Api_Security_Contracts_IPartnershipService_RefreshTokenCredential.htm" rel="nofollow">RefreshTokenCredential</a>
                                 <p>And give the Consumer Token key.</p>
-                                <p>If the Consumer Token ExpirationDate has been reached, you will get a BusinessFault message “Invalid ToenCredential”. In this case, you will need to ask for a new temp credential and do the whole Consumer Token process.</p>
+                                <p>If the Consumer Token ExpirationDate has been reached, you will get a BusinessFault message “Invalid TokenCredential”. In this case, you will need to ask for a new temp credential and do the whole Consumer Token process.</p>
                             </div>
                         </div>
                     </div>

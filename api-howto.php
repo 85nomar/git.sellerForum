@@ -20,9 +20,9 @@ $Layout->start(); ?>
                         <div id="collapseOne" class="accordion-body collapse">
                             <div class="accordion-inner">
                                 <p>For external applications, please refer to the “How to obtain a Token?” section of
-                                    <a href="http://ticket:8080/display/CORE/Authentication" target="_blank">Authentication
+                                    <a href="http://api.ricardo.ch/api-authentication.html" target="_blank">Authentication
                                         .</a></p>
-                                <p>For Ricardo Group internal applications, use the method <a href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/M_Ricardo_Contracts_ISecurityService_Login.htm" target="_blank">SecurityService.Login</a> to retrieve a Consumer Token.</p>
+                                <p>For Ricardo Group internal applications, use the method <a href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/M_Ricardo_Contracts_ISecurityService_Login.htm" target="_blank">SecurityService.Login</a> to retrieve a Consumer Token.</p>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ $Layout->start(); ?>
                         </div>
                         <div id="collapseTwo" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <p>To insert a single article, you can use the <a href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/M_Ricardo_Contracts_ISellService_InsertArticle.htm" target="_blank">SellService.InsertArticle</a> method. Your article will be live immediately. This method return the fees for the listing and the article identifier.</p>
+                                <p>To insert a single article, you can use the <a href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/M_Ricardo_Contracts_ISellService_InsertArticle.htm" target="_blank">SellService.InsertArticle</a> method. Your article will be live immediately. This method return the fees for the listing and the article identifier.</p>
                                 <div>
                                     <div class="span6">
                                         <h4>JSON example</h4>
@@ -194,7 +194,7 @@ Body
                         </div>
                         <div id="simpleSearch" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <p>if you need to perform a simple search, you can use the method <a href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/M_Ricardo_Contracts_ISearchService_SimpleSearch.htm" target="_blank">SearchService
+                                <p>if you need to perform a simple search, you can use the method <a href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/M_Ricardo_Contracts_ISearchService_SimpleSearch.htm" target="_blank">SearchService
                                     .SimpleSearch</a> which allows you to search for articles taht contain a certain text and are below a given category. You will be able to specify paging values and a sort.</p>
                                 <p>SimpleSearchParameter contains the following fields:</p>
                                 <ul>
@@ -381,11 +381,11 @@ Body
                             <div class="accordion-inner">
                                 <p>Here is the list of methods to use to retrieve the article lists from the MyPages
                                       section.</p>
-                                <ul><li>Open auctions:&nbsp;<a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/M_Ricardo_Contracts_ISellerAccountService_GetOpenArticles.htm" rel="nofollow">SellerAccountService.GetOpenArticles</a></li>
-                                    <li>Sold auctions:&nbsp;<a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/M_Ricardo_Contracts_ISellerAccountService_GetSoldArticles.htm" rel="nofollow">SellerAccountService.GetSoldArticles</a></li>
-                                    <li>Completed transactions:&nbsp;<a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/M_Ricardo_Contracts_ISellerAccountService_GetCompletedTransactions.htm" rel="nofollow">SellerAccountService.GetCompletedTransactions</a></li>
-                                    <li>Unsold auctions:&nbsp;<a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/M_Ricardo_Contracts_ISellerAccountService_GetUnsoldArticles.htm" rel="nofollow">SellerAccountService.GetUnsoldArticles</a></li>
-                                    <li>Planned auctions:&nbsp;<a class="external-link" href="http://ws.betaqxl.com/RicardoApi/documentation/?topic=html/M_Ricardo_Contracts_ISellerAccountService_GetPlannedArticles.htm" rel="nofollow">SellerAccountService.GetPlannedArticles</a></li>
+                                <ul><li>Open auctions:&nbsp;<a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/M_Ricardo_Contracts_ISellerAccountService_GetOpenArticles.htm" rel="nofollow">SellerAccountService.GetOpenArticles</a></li>
+                                    <li>Sold auctions:&nbsp;<a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/M_Ricardo_Contracts_ISellerAccountService_GetSoldArticles.htm" rel="nofollow">SellerAccountService.GetSoldArticles</a></li>
+                                    <li>Completed transactions:&nbsp;<a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/M_Ricardo_Contracts_ISellerAccountService_GetCompletedTransactions.htm" rel="nofollow">SellerAccountService.GetCompletedTransactions</a></li>
+                                    <li>Unsold auctions:&nbsp;<a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/M_Ricardo_Contracts_ISellerAccountService_GetUnsoldArticles.htm" rel="nofollow">SellerAccountService.GetUnsoldArticles</a></li>
+                                    <li>Planned auctions:&nbsp;<a class="external-link" href="https://ws.ricardo.ch/ricardoApi/documentation/technical//?topic=html/M_Ricardo_Contracts_ISellerAccountService_GetPlannedArticles.htm" rel="nofollow">SellerAccountService.GetPlannedArticles</a></li>
                                 </ul>
                                 <img src="img/docu/show-mySelling.png" width="100%"/>
                                 <div>

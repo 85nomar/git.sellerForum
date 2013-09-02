@@ -19,6 +19,7 @@ $Layout->start(); ?>
                         </div>
                         <div id="collapseOne" class="accordion-body collapse">
                             <div class="accordion-inner">
+                                <p>You need to modify the configuration file in which you reference the service.</p>
                                 <p>For example :</p>
                                 <pre class="prettyprint"><xmp>
 <system.serviceModel>
@@ -51,7 +52,7 @@ $Layout->start(); ?>
                         </div>
                         <div id="collapseTwo" class="accordion-body collapse">
                             <div class="accordion-inner">
-                                <p>...and always get an error while calling a Service using JSON</p>
+                                <p>...and the JSON string received looks like that:</p>
                                 <pre class="prettyprint"><xmp>
 {
     "ErrorCodes": null,
